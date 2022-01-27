@@ -4935,6 +4935,34 @@ acf_add_local_field_group(array(
             'ui_on_text' => '',
             'ui_off_text' => '',
         ),
+        //KB CHANGE
+        array(
+            'key' => 'field_5ARL51E56Mb0b',
+            'label' => 'Disable ARLEM',
+            'name' => 'disable_arlem',
+            'type' => 'true_false',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => array(
+                array(
+                    array(
+                        'field' => 'field_5850595bc4ed3',
+                        'operator' => '!=',
+                        'value' => '1',
+                    ),
+                ),
+            ),
+            'wrapper' => array(
+                'width' => '50',
+                'class' => '',
+                'id' => '',
+            ),
+            'message' => 'Disable Users to Submit ARLEMs',
+            'default_value' => 0,
+            'ui' => 1,
+            'ui_on_text' => '',
+            'ui_off_text' => '',
+        ),
         array(
             'key' => 'field_6096d4f98be8d',
             'label' => 'Disable List',

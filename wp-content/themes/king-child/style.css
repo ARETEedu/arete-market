@@ -12,3 +12,27 @@ Text Domain: king
 */
 
 /*************** Add your custom css here  ***************/
+.king-submit-open {
+    background-color: #00abba;
+}
+
+.king-submit.open .king-submit-open {
+    box-shadow: 0px 0px 2px 5px #00aabaa1;
+}
+
+.king-submit-buttons {
+    background-color: #00abba;
+}
+
+body {
+	font-family: 'Space Mono';
+}
+
+.king-cat-dots {
+	font-family: 'Nunito',sans-serif !important;
+}
+
+.current_page_item {
+	font-weight: normal !important;
+	color: #00abba !important;
+}

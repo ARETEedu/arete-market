@@ -33,6 +33,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php if ( get_field( 'disable_music', 'options' ) !== true ) : ?>
 						<li><a href="<?php echo esc_url( site_url() . '/' . $GLOBALS['king_saudio'] ); ?>"><i class="fas fa-headphones-alt"></i><?php echo esc_html_e( 'Music', 'king' ); ?></a></li>
 					<?php endif; ?>
+					<!--KB CHANGE-->
+					<?php if ( get_field( 'disable_arlem', 'options' ) !== true ) : ?>
+						<li><a href="<?php echo esc_url( site_url() . '/' . $GLOBALS['king_sarlem'] ); ?>"><i class="fas fa-play"></i><?php echo esc_html_e( 'Arlem', 'king' ); ?></a></li>
+					<?php endif; ?>
 					<?php if ( get_field( 'disable_list', 'options' ) !== true ) : ?>
 						<li><a href="<?php echo esc_url( site_url() . '/' . $GLOBALS['king_snews'] . '/list' ); ?>"><i class="fas fa-equals"></i><?php echo esc_html_e( 'List', 'king' ); ?></a></li>
 					<?php endif; ?>

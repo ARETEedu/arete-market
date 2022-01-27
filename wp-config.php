@@ -37,6 +37,13 @@ define( 'DB_CHARSET', 'utf8' );
 /** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 
+/** ENABLE DEBUGGING */
+@ini_set(‘display_errors’,0);
+define('WP_DEBUG', true);
+define('WP_DEBUG_DISPLAY', false);
+define('WP_DEBUG_LOG', true);
+define('SAVEQUERIES', true);
+
 /**
  * Authentication Unique Keys and Salts.
  *

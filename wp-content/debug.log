@@ -1,0 +1,879 @@
+[27-Jan-2022 20:06:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:06:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:06:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:0
+[27-Jan-2022 20:06:57 UTC] PHP   2. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:17
+[27-Jan-2022 20:06:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-blog-header.php:13
+[27-Jan-2022 20:06:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:06:57 UTC] PHP   5. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:06:57 UTC] PHP   6. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:06:57 UTC] PHP   7. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:06:57 UTC] PHP   8. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:13
+[27-Jan-2022 20:06:57 UTC] PHP   9. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:06:57 UTC] PHP  10. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:06:57 UTC] PHP  11. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:06:57 UTC] PHP  12. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:06:57 UTC] PHP  13. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:06:57 UTC] PHP  14. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:06:57 UTC] PHP  15. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:06:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:06:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:06:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:0
+[27-Jan-2022 20:06:57 UTC] PHP   2. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:17
+[27-Jan-2022 20:06:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-blog-header.php:13
+[27-Jan-2022 20:06:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:06:57 UTC] PHP   5. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:06:57 UTC] PHP   6. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:06:57 UTC] PHP   7. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:06:57 UTC] PHP   8. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:612
+[27-Jan-2022 20:06:57 UTC] PHP   9. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:06:57 UTC] PHP  10. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:06:57 UTC] PHP  11. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:06:57 UTC] PHP  12. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:06:57 UTC] PHP  13. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:06:57 UTC] PHP  14. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:06:57 UTC] PHP  15. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:06:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:06:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:06:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:0
+[27-Jan-2022 20:06:57 UTC] PHP   2. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:17
+[27-Jan-2022 20:06:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-blog-header.php:13
+[27-Jan-2022 20:06:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:06:57 UTC] PHP   5. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:06:57 UTC] PHP   6. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:06:57 UTC] PHP   7. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:06:57 UTC] PHP   8. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:681
+[27-Jan-2022 20:06:57 UTC] PHP   9. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:06:57 UTC] PHP  10. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:06:57 UTC] PHP  11. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:06:57 UTC] PHP  12. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:06:57 UTC] PHP  13. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:06:57 UTC] PHP  14. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:06:57 UTC] PHP  15. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:06:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:06:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:06:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:0
+[27-Jan-2022 20:06:57 UTC] PHP   2. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:17
+[27-Jan-2022 20:06:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-blog-header.php:13
+[27-Jan-2022 20:06:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:06:57 UTC] PHP   5. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:06:57 UTC] PHP   6. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:06:57 UTC] PHP   7. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:06:57 UTC] PHP   8. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:681
+[27-Jan-2022 20:06:57 UTC] PHP   9. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:06:57 UTC] PHP  10. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:06:57 UTC] PHP  11. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:06:57 UTC] PHP  12. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:06:57 UTC] PHP  13. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:06:57 UTC] PHP  14. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:06:57 UTC] PHP  15. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:06:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:06:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:06:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:0
+[27-Jan-2022 20:06:57 UTC] PHP   2. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:17
+[27-Jan-2022 20:06:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-blog-header.php:13
+[27-Jan-2022 20:06:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:06:57 UTC] PHP   5. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:06:57 UTC] PHP   6. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:06:57 UTC] PHP   7. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:06:57 UTC] PHP   8. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:703
+[27-Jan-2022 20:06:57 UTC] PHP   9. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:06:57 UTC] PHP  10. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:06:57 UTC] PHP  11. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:06:57 UTC] PHP  12. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:06:57 UTC] PHP  13. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:06:57 UTC] PHP  14. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:06:57 UTC] PHP  15. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:06:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:06:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:06:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:0
+[27-Jan-2022 20:06:57 UTC] PHP   2. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:17
+[27-Jan-2022 20:06:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-blog-header.php:13
+[27-Jan-2022 20:06:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:06:57 UTC] PHP   5. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:06:57 UTC] PHP   6. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:06:57 UTC] PHP   7. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:06:57 UTC] PHP   8. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:788
+[27-Jan-2022 20:06:57 UTC] PHP   9. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:06:57 UTC] PHP  10. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:06:57 UTC] PHP  11. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:06:57 UTC] PHP  12. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:06:57 UTC] PHP  13. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:06:57 UTC] PHP  14. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:06:57 UTC] PHP  15. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:06:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:06:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:06:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:0
+[27-Jan-2022 20:06:57 UTC] PHP   2. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:17
+[27-Jan-2022 20:06:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-blog-header.php:13
+[27-Jan-2022 20:06:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:06:57 UTC] PHP   5. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:06:57 UTC] PHP   6. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:06:57 UTC] PHP   7. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:06:57 UTC] PHP   8. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:912
+[27-Jan-2022 20:06:57 UTC] PHP   9. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:06:57 UTC] PHP  10. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:06:57 UTC] PHP  11. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:06:57 UTC] PHP  12. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:06:57 UTC] PHP  13. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:06:57 UTC] PHP  14. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:06:57 UTC] PHP  15. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:06:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:06:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:06:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:0
+[27-Jan-2022 20:06:57 UTC] PHP   2. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:17
+[27-Jan-2022 20:06:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-blog-header.php:13
+[27-Jan-2022 20:06:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:06:57 UTC] PHP   5. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:06:57 UTC] PHP   6. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:06:57 UTC] PHP   7. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:06:57 UTC] PHP   8. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:959
+[27-Jan-2022 20:06:57 UTC] PHP   9. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:06:57 UTC] PHP  10. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:06:57 UTC] PHP  11. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:06:57 UTC] PHP  12. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:06:57 UTC] PHP  13. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:06:57 UTC] PHP  14. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:06:57 UTC] PHP  15. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:06:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:06:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:06:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:0
+[27-Jan-2022 20:06:57 UTC] PHP   2. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:17
+[27-Jan-2022 20:06:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-blog-header.php:13
+[27-Jan-2022 20:06:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:06:57 UTC] PHP   5. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:06:57 UTC] PHP   6. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:06:57 UTC] PHP   7. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:06:57 UTC] PHP   8. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:993
+[27-Jan-2022 20:06:57 UTC] PHP   9. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:06:57 UTC] PHP  10. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:06:57 UTC] PHP  11. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:06:57 UTC] PHP  12. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:06:57 UTC] PHP  13. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:06:57 UTC] PHP  14. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:06:57 UTC] PHP  15. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:06:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:06:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:06:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:0
+[27-Jan-2022 20:06:57 UTC] PHP   2. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:17
+[27-Jan-2022 20:06:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-blog-header.php:13
+[27-Jan-2022 20:06:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:06:57 UTC] PHP   5. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:06:57 UTC] PHP   6. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:06:57 UTC] PHP   7. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:06:57 UTC] PHP   8. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:1142
+[27-Jan-2022 20:06:57 UTC] PHP   9. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:06:57 UTC] PHP  10. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:06:57 UTC] PHP  11. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:06:57 UTC] PHP  12. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:06:57 UTC] PHP  13. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:06:57 UTC] PHP  14. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:06:57 UTC] PHP  15. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:06:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:06:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:06:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:0
+[27-Jan-2022 20:06:57 UTC] PHP   2. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:17
+[27-Jan-2022 20:06:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-blog-header.php:13
+[27-Jan-2022 20:06:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:06:57 UTC] PHP   5. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:06:57 UTC] PHP   6. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:06:57 UTC] PHP   7. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:06:57 UTC] PHP   8. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:1219
+[27-Jan-2022 20:06:57 UTC] PHP   9. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:06:57 UTC] PHP  10. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:06:57 UTC] PHP  11. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:06:57 UTC] PHP  12. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:06:57 UTC] PHP  13. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:06:57 UTC] PHP  14. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:06:57 UTC] PHP  15. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:06:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:06:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:06:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:0
+[27-Jan-2022 20:06:57 UTC] PHP   2. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:17
+[27-Jan-2022 20:06:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-blog-header.php:13
+[27-Jan-2022 20:06:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:06:57 UTC] PHP   5. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:06:57 UTC] PHP   6. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:06:57 UTC] PHP   7. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:06:57 UTC] PHP   8. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:1297
+[27-Jan-2022 20:06:57 UTC] PHP   9. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:06:57 UTC] PHP  10. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:06:57 UTC] PHP  11. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:06:57 UTC] PHP  12. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:06:57 UTC] PHP  13. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:06:57 UTC] PHP  14. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:06:57 UTC] PHP  15. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:06:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:06:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:06:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:0
+[27-Jan-2022 20:06:57 UTC] PHP   2. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:17
+[27-Jan-2022 20:06:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-blog-header.php:13
+[27-Jan-2022 20:06:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:06:57 UTC] PHP   5. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:06:57 UTC] PHP   6. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:06:57 UTC] PHP   7. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:738
+[27-Jan-2022 20:06:57 UTC] PHP   8. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/post.php:124
+[27-Jan-2022 20:06:57 UTC] PHP   9. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:06:57 UTC] PHP  10. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:06:57 UTC] PHP  11. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:06:57 UTC] PHP  12. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:06:57 UTC] PHP  13. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:06:57 UTC] PHP  14. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:06:57 UTC] PHP  15. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:06:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:06:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:06:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:0
+[27-Jan-2022 20:06:57 UTC] PHP   2. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:17
+[27-Jan-2022 20:06:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-blog-header.php:13
+[27-Jan-2022 20:06:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:06:57 UTC] PHP   5. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:06:57 UTC] PHP   6. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:06:57 UTC] PHP   7. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:738
+[27-Jan-2022 20:06:57 UTC] PHP   8. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/post.php:254
+[27-Jan-2022 20:06:57 UTC] PHP   9. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:06:57 UTC] PHP  10. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:06:57 UTC] PHP  11. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:06:57 UTC] PHP  12. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:06:57 UTC] PHP  13. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:06:57 UTC] PHP  14. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:06:57 UTC] PHP  15. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:06:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:06:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:06:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:0
+[27-Jan-2022 20:06:57 UTC] PHP   2. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:17
+[27-Jan-2022 20:06:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-blog-header.php:13
+[27-Jan-2022 20:06:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:06:57 UTC] PHP   5. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:06:57 UTC] PHP   6. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:06:57 UTC] PHP   7. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:738
+[27-Jan-2022 20:06:57 UTC] PHP   8. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/post.php:797
+[27-Jan-2022 20:06:57 UTC] PHP   9. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:06:57 UTC] PHP  10. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:06:57 UTC] PHP  11. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:06:57 UTC] PHP  12. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:06:57 UTC] PHP  13. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:06:57 UTC] PHP  14. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:06:57 UTC] PHP  15. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:06:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:06:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:06:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:0
+[27-Jan-2022 20:06:57 UTC] PHP   2. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:17
+[27-Jan-2022 20:06:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-blog-header.php:13
+[27-Jan-2022 20:06:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:06:57 UTC] PHP   5. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:06:57 UTC] PHP   6. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:06:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:990
+[27-Jan-2022 20:06:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:06:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:06:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:06:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:06:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:06:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:06:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:06:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:06:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:06:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:0
+[27-Jan-2022 20:06:57 UTC] PHP   2. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:17
+[27-Jan-2022 20:06:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-blog-header.php:13
+[27-Jan-2022 20:06:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:06:57 UTC] PHP   5. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:06:57 UTC] PHP   6. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:06:57 UTC] PHP   7. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:993
+[27-Jan-2022 20:06:57 UTC] PHP   8. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme-options.php:12
+[27-Jan-2022 20:06:57 UTC] PHP   9. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:06:57 UTC] PHP  10. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:06:57 UTC] PHP  11. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:06:57 UTC] PHP  12. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:06:57 UTC] PHP  13. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:06:57 UTC] PHP  14. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:06:57 UTC] PHP  15. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:06:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:06:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:06:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:0
+[27-Jan-2022 20:06:57 UTC] PHP   2. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/index.php:17
+[27-Jan-2022 20:06:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-blog-header.php:13
+[27-Jan-2022 20:06:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:06:57 UTC] PHP   5. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:06:57 UTC] PHP   6. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:06:57 UTC] PHP   7. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:993
+[27-Jan-2022 20:06:57 UTC] PHP   8. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme-options.php:112
+[27-Jan-2022 20:06:57 UTC] PHP   9. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:06:57 UTC] PHP  10. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:06:57 UTC] PHP  11. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:06:57 UTC] PHP  12. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:06:57 UTC] PHP  13. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:06:57 UTC] PHP  14. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:06:57 UTC] PHP  15. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:07:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:07:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:07:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:07:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:07:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:07:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:07:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:07:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:07:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:13
+[27-Jan-2022 20:07:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:07:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:07:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:07:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:07:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:07:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:07:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:07:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:07:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:07:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:07:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:07:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:07:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:07:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:07:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:07:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:612
+[27-Jan-2022 20:07:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:07:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:07:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:07:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:07:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:07:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:07:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:07:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:07:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:07:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:07:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:07:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:07:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:07:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:07:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:07:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:681
+[27-Jan-2022 20:07:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:07:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:07:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:07:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:07:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:07:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:07:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:07:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:07:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:07:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:07:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:07:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:07:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:07:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:07:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:07:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:681
+[27-Jan-2022 20:07:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:07:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:07:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:07:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:07:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:07:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:07:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:07:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:07:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:07:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:07:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:07:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:07:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:07:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:07:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:07:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:703
+[27-Jan-2022 20:07:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:07:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:07:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:07:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:07:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:07:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:07:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:07:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:07:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:07:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:07:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:07:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:07:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:07:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:07:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:07:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:788
+[27-Jan-2022 20:07:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:07:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:07:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:07:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:07:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:07:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:07:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:07:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:07:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:07:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:07:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:07:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:07:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:07:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:07:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:07:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:912
+[27-Jan-2022 20:07:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:07:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:07:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:07:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:07:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:07:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:07:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:07:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:07:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:07:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:07:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:07:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:07:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:07:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:07:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:07:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:959
+[27-Jan-2022 20:07:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:07:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:07:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:07:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:07:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:07:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:07:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:07:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:07:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:07:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:07:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:07:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:07:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:07:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:07:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:07:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:993
+[27-Jan-2022 20:07:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:07:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:07:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:07:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:07:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:07:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:07:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:07:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:07:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:07:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:07:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:07:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:07:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:07:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:07:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:07:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:1142
+[27-Jan-2022 20:07:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:07:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:07:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:07:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:07:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:07:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:07:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:07:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:07:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:07:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:07:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:07:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:07:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:07:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:07:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:07:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:1219
+[27-Jan-2022 20:07:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:07:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:07:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:07:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:07:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:07:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:07:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:07:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:07:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:07:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:07:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:07:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:07:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:07:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:07:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:07:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:1297
+[27-Jan-2022 20:07:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:07:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:07:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:07:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:07:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:07:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:07:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:07:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:07:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:07:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:07:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:07:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:07:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:07:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:07:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:738
+[27-Jan-2022 20:07:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/post.php:124
+[27-Jan-2022 20:07:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:07:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:07:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:07:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:07:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:07:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:07:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:07:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:07:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:07:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:07:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:07:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:07:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:07:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:07:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:738
+[27-Jan-2022 20:07:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/post.php:254
+[27-Jan-2022 20:07:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:07:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:07:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:07:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:07:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:07:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:07:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:07:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:07:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:07:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:07:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:07:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:07:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:07:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:07:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:738
+[27-Jan-2022 20:07:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/post.php:797
+[27-Jan-2022 20:07:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:07:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:07:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:07:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:07:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:07:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:07:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:07:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:07:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:07:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:07:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:07:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:07:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:07:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:07:57 UTC] PHP   6. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:990
+[27-Jan-2022 20:07:57 UTC] PHP   7. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:07:57 UTC] PHP   8. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:07:57 UTC] PHP   9. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:07:57 UTC] PHP  10. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:07:57 UTC] PHP  11. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:07:57 UTC] PHP  12. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:07:57 UTC] PHP  13. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:07:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:07:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:07:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:07:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:07:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:07:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:07:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:07:57 UTC] PHP   6. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:993
+[27-Jan-2022 20:07:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme-options.php:12
+[27-Jan-2022 20:07:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:07:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:07:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:07:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:07:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:07:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:07:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:07:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:07:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:07:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:07:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:07:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:07:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:07:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:07:57 UTC] PHP   6. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:993
+[27-Jan-2022 20:07:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme-options.php:112
+[27-Jan-2022 20:07:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:07:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:07:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:07:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:07:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:07:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:07:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:09:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:09:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:09:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:09:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:09:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:09:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:09:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:09:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:09:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:13
+[27-Jan-2022 20:09:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:09:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:09:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:09:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:09:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:09:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:09:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:09:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:09:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:09:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:09:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:09:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:09:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:09:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:09:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:09:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:612
+[27-Jan-2022 20:09:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:09:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:09:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:09:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:09:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:09:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:09:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:09:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:09:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:09:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:09:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:09:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:09:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:09:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:09:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:09:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:681
+[27-Jan-2022 20:09:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:09:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:09:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:09:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:09:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:09:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:09:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:09:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:09:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:09:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:09:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:09:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:09:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:09:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:09:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:09:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:681
+[27-Jan-2022 20:09:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:09:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:09:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:09:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:09:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:09:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:09:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:09:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:09:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:09:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:09:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:09:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:09:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:09:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:09:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:09:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:703
+[27-Jan-2022 20:09:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:09:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:09:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:09:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:09:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:09:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:09:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:09:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:09:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:09:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:09:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:09:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:09:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:09:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:09:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:09:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:788
+[27-Jan-2022 20:09:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:09:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:09:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:09:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:09:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:09:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:09:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:09:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:09:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:09:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:09:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:09:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:09:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:09:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:09:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:09:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:912
+[27-Jan-2022 20:09:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:09:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:09:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:09:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:09:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:09:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:09:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:09:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:09:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:09:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:09:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:09:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:09:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:09:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:09:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:09:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:959
+[27-Jan-2022 20:09:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:09:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:09:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:09:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:09:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:09:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:09:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:09:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:09:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:09:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:09:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:09:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:09:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:09:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:09:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:09:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:993
+[27-Jan-2022 20:09:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:09:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:09:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:09:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:09:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:09:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:09:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:09:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:09:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:09:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:09:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:09:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:09:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:09:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:09:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:09:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:1142
+[27-Jan-2022 20:09:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:09:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:09:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:09:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:09:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:09:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:09:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:09:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:09:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:09:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:09:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:09:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:09:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:09:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:09:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:09:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:1219
+[27-Jan-2022 20:09:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:09:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:09:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:09:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:09:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:09:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:09:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:09:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:09:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:09:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:09:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:09:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:09:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:09:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:09:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:733
+[27-Jan-2022 20:09:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme.php:1297
+[27-Jan-2022 20:09:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:09:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:09:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:09:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:09:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:09:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:09:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:09:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:09:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:09:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:09:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:09:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:09:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:09:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:09:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:738
+[27-Jan-2022 20:09:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/post.php:124
+[27-Jan-2022 20:09:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:09:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:09:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:09:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:09:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:09:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:09:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:09:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:09:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:09:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:09:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:09:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:09:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:09:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:09:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:738
+[27-Jan-2022 20:09:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/post.php:254
+[27-Jan-2022 20:09:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:09:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:09:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:09:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:09:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:09:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:09:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:09:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:09:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:09:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:09:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:09:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:09:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:09:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:09:57 UTC] PHP   6. require() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:738
+[27-Jan-2022 20:09:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/post.php:797
+[27-Jan-2022 20:09:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:09:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:09:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:09:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:09:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:09:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:09:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:09:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:09:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:09:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:09:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:09:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:09:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:09:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:09:57 UTC] PHP   6. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:990
+[27-Jan-2022 20:09:57 UTC] PHP   7. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:09:57 UTC] PHP   8. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:09:57 UTC] PHP   9. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:09:57 UTC] PHP  10. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:09:57 UTC] PHP  11. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:09:57 UTC] PHP  12. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:09:57 UTC] PHP  13. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:09:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:09:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:09:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:09:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:09:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:09:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:09:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:09:57 UTC] PHP   6. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:993
+[27-Jan-2022 20:09:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme-options.php:12
+[27-Jan-2022 20:09:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:09:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:09:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:09:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:09:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:09:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:09:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768
+[27-Jan-2022 20:09:57 UTC] PHP Notice:  acf_get_value was called <strong>incorrectly</strong>. <strong>Advanced Custom Fields PRO</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href="https://www.advancedcustomfields.com/resources/acf-field-functions/" target="_blank">Learn how to fix this</a>. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.11.1.) in /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php on line 5768
+[27-Jan-2022 20:09:57 UTC] PHP Stack trace:
+[27-Jan-2022 20:09:57 UTC] PHP   1. {main}() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:0
+[27-Jan-2022 20:09:57 UTC] PHP   2. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-admin/admin-ajax.php:22
+[27-Jan-2022 20:09:57 UTC] PHP   3. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-load.php:50
+[27-Jan-2022 20:09:57 UTC] PHP   4. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-config.php:84
+[27-Jan-2022 20:09:57 UTC] PHP   5. include() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-settings.php:555
+[27-Jan-2022 20:09:57 UTC] PHP   6. require_once() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/functions.php:993
+[27-Jan-2022 20:09:57 UTC] PHP   7. get_field() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/themes/king/includes/theme-options.php:112
+[27-Jan-2022 20:09:57 UTC] PHP   8. acf_get_value() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/api/api-template.php:45
+[27-Jan-2022 20:09:57 UTC] PHP   9. do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:72
+[27-Jan-2022 20:09:57 UTC] PHP  10. WP_Hook->do_action() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/plugin.php:474
+[27-Jan-2022 20:09:57 UTC] PHP  11. WP_Hook->apply_filters() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:331
+[27-Jan-2022 20:09:57 UTC] PHP  12. acf_log_invalid_field_notice() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/class-wp-hook.php:307
+[27-Jan-2022 20:09:57 UTC] PHP  13. _doing_it_wrong() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-content/plugins/advanced-custom-fields-pro/includes/acf-value-functions.php:357
+[27-Jan-2022 20:09:57 UTC] PHP  14. trigger_error() /Users/katharinefitzpatrick/Local Sites/oerxr/app/public/wp-includes/functions.php:5768

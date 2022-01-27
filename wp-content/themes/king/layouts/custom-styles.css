@@ -1,0 +1,45 @@
+/* Typography
+--------------------------*/
+/* ------CustomCSS------ */
+.king-submit.open  {
+   background-colour: #00abba;
+}/* ------body------ */
+/* ------header------ */
+.king-top-header {
+	background-color: #00abba;
+	background: -moz-linear-gradient(left, #00abba 0%, #37afba 100%);
+	background: -webkit-linear-gradient(left, #00abba 0%, #37afba 100%);
+	background: linear-gradient(to right, #00abba 0%, #37afba 100%);
+}
+.king-top-header-menu ul ul {
+	background-color: #00abba;
+}
+.king-top-header-menu a {
+	color: #000000;
+}
+.king-top-header-menu .menu-item-has-children:after {
+	color: #000000;
+}
+.king-top-header-icons a {
+	color: #000000;
+	border-color: #000000;
+}
+/* ------footer------ */
+/* ------sidebar------ */
+/* ------PostPage------ */
+/* ------KingflixPage------ */
+.kingflix-post-content {
+	background-color:#00abba;
+}
+.kingflix-post-title a,
+.king-editorschoice-title {
+    color:#000000;
+}
+.kingflix-button {
+    color:#bdf200;
+    border-color:#bdf200;
+}
+.kingflix-post-in .cat-links a {
+    color:#bdf200;
+}
+

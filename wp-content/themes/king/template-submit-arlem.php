@@ -96,7 +96,8 @@ if ( isset( $_POST['king_ar_post_upload_form_submitted'] ) && wp_verify_nonce( $
 				'post_status'   => $poststatus,
 			)
 		);
-		set_post_format( $post_id, 'video' ); // https://developer.wordpress.org/themes/functionality/post-formats/
+		//KB: edit, post type ARLEM
+		set_post_format( $post_id, 'arlem' ); // https://developer.wordpress.org/themes/functionality/post-formats/
 
 		update_field( 'video-url', $video_url, $post_id );
 		update_post_meta( $post_id, '_video-url', 'field_587be2665e807' );
