@@ -17,7 +17,6 @@ get_header(); ?>
 <?php
 	$template  = get_field_object( 'single_post_templates', 'options' );
 	$template2 = get_field_object( 'post_template' );
-
 	if ( ! empty( $template2['value'] ) ) {
 		get_template_part( 'template-parts/post-templates/single', 'post-' . $template2['value'] );
 	} elseif ( ! empty( $template['value'] ) ) {

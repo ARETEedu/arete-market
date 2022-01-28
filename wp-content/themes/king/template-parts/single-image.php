@@ -13,6 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header(); ?>
+
 <?php get_template_part( 'template-parts/king-header-nav' ); ?>
 <?php
 

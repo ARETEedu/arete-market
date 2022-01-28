@@ -249,6 +249,7 @@ if ( ! function_exists( 'king_setup' ) ) :
 				'video',
 				'link',
 				'audio',
+				'arlem',
 			)
 		);
 
@@ -332,8 +333,8 @@ function king_scripts_enqueue() {
 	}
 
 	wp_enqueue_script( 'bootstrap-js', KING_THEME_URI . '/layouts/js/bootstrap.min.js', array( 'jquery' ), THEME_VERSION, true );
-
-	if ( $wp_query->get( 'bpsnews' ) || $wp_query->get( 'bpsvideo' ) || $wp_query->get( 'bpsaudio' ) || $wp_query->get( 'bpsimage' ) || $wp_query->get( 'bpupdte' ) ) {
+	//KB CHANGE
+	if ( $wp_query->get( 'bpsnews' ) || $wp_query->get( 'bpsvideo' ) || $wp_query->get( 'bpsaudio' ) || $wp_query->get( 'bpsimage' ) || $wp_query->get( 'bpsarlem' ) || $wp_query->get( 'bpupdte' ) ) {
 		wp_enqueue_script( 'tagsinput', KING_THEME_URI . '/layouts/js/jquery.tagsinput.min.js', array(), THEME_VERSION, true );
 		wp_enqueue_script( 'wp-tinymce' );
 		wp_enqueue_script( 'king_submit_script', KING_THEME_URI . '/layouts/js/submit.js', array( 'jquery' ), THEME_VERSION, true );
@@ -469,6 +470,7 @@ function king_get_post_format_slugs() {
 		'quote'   => 'news',
 		'status'  => 'status-updates',
 		'video'   => 'videos',
+		'arlem'	  => 'arlem', //KB changes
 	);
 
 	return $slugs;
@@ -660,6 +662,7 @@ function king_scripts() {
 	wp_enqueue_style( 'custom-styles', KING_THEME_URI . '/layouts/custom-styles.css', array(), THEME_VERSION );
 	wp_enqueue_style( 'googlefont-style', king_google_fonts_url(), array(), '1.0.0' );
 	wp_enqueue_style( 'font-awesome-style', KING_THEME_URI . '/layouts/font-awesome/css/all.min.css', array(), THEME_VERSION );
+	//KB CHANGES FOLLOW UP?
 	if ( is_page_template( 'king_page_kingflix.php' ) || is_singular() && has_post_format( 'video' ) || has_post_format( 'audio' ) ) {
 		wp_enqueue_script( 'video-js', KING_THEME_URI . '/layouts/js/videojs/video.min.js', array( 'jquery' ), '1.0', false );
 		wp_enqueue_style( 'video-js-style', KING_THEME_URI . '/layouts/js/videojs/video-js.css', array(), THEME_VERSION );
@@ -748,6 +751,7 @@ global $king_snews;
 global $king_svideo;
 global $king_saudio;
 global $king_simage;
+global $king_sarlem; //KB CHANGE
 global $king_followers;
 global $king_following;
 global $king_dashboard;
@@ -769,6 +773,7 @@ function king_init_globals() {
 	global $king_svideo;
 	global $king_saudio;
 	global $king_simage;
+	global $king_sarlem; //KB CHANGE
 	global $king_followers;
 	global $king_following;
 	global $king_dashboard;
@@ -787,6 +792,7 @@ function king_init_globals() {
 	$king_svideo    = 'submit-video';
 	$king_saudio    = 'submit-audio';
 	$king_simage    = 'submit-image';
+	$king_sarlem	= 'submit-arlem'; //KB CHANGE
 	$king_dashboard = 'dashboard';
 	$king_prvtmsg   = 'prvtmsg';
 	$king_updte     = 'updte';
@@ -818,6 +824,7 @@ function king_add_rewrite_rules() {
 	add_rewrite_rule( '^' . $GLOBALS['king_svideo'] . '/?', 'index.php?bpsvideo=1', 'top' );
 	add_rewrite_rule( '^' . $GLOBALS['king_saudio'] . '/?', 'index.php?bpsaudio=1', 'top' );
 	add_rewrite_rule( '^' . $GLOBALS['king_simage'] . '/?', 'index.php?bpsimage=1', 'top' );
+	add_rewrite_rule( '^' . $GLOBALS['king_sarlem'] . '/?', 'index.php?bpsarlem=1', 'top' ); //KB CHANGE
 	add_rewrite_rule( '^' . $GLOBALS['king_updte'] . '/?', 'index.php?bpupdte=1', 'top' );
 }
 add_action( 'init', 'king_add_rewrite_rules' );
@@ -847,6 +854,7 @@ function king_query_vars( $query_vars ) {
 	$query_vars[] = 'bpsvideo';
 	$query_vars[] = 'bpsaudio';
 	$query_vars[] = 'bpsimage';
+	$query_vars[] = 'bpsarlem'; //KB CHANGE
 	$query_vars[] = 'bpsettings';
 	$query_vars[] = 'bpupdte';
 	$query_vars[] = 'profile_id';
@@ -912,6 +920,11 @@ function king_template_redirects() {
 	endif;
 	if ( $wp_query->get( 'bpsimage' ) ) :
 		get_template_part( 'template', 'submit-image' );
+		exit();
+	endif;
+	//KB CHANGE
+	if ( $wp_query->get( 'bpsarlem' ) ) :
+		get_template_part( 'template', 'submit-arlem' );
 		exit();
 	endif;
 	if ( $wp_query->get( 'bpsettings' ) ) :

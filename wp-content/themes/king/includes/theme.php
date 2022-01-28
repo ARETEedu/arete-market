@@ -1274,6 +1274,8 @@ if ( king_plugin_active( 'ACF' ) ) :
 						$output .= '<span class="lsearch-format-video" >' . esc_html__( 'Video', 'king' ) . '</span>';
 					elseif ( has_post_format( 'image' ) ) :
 						$output .= '<span class="lsearch-format-image" >' . esc_html__( 'Image', 'king' ) . '</span>';
+					elseif ( has_post_format( 'arlem' ) ) : //KB CHANGES follow up lsearch-format-arlem
+						$output .= '<span class="lsearch-format-arlem" >' . esc_html__( 'ARLEM', 'king' ) . '</span>';
 					elseif ( has_post_format( 'audio' ) ) :
 						$output .= '<span class="lsearch-format-music" >' . esc_html__( 'Music', 'king' ) . '</span>';
 					endif;
@@ -1361,6 +1363,8 @@ if ( king_plugin_active( 'ACF' ) ) :
 							$output .= '<span class="lsearch-format-video" >' . esc_html__( 'Video', 'king' ) . '</span>';
 						elseif ( has_post_format( 'image' ) ) :
 							$output .= '<span class="lsearch-format-image" >' . esc_html__( 'Image', 'king' ) . '</span>';
+						elseif ( has_post_format( 'arlem' ) ) : //KB CHANGES, follow up lsearch-format-arlem
+							$output .= '<span class="lsearch-format-arlem" >' . esc_html__( 'ARLEM', 'king' ) . '</span>';
 						elseif ( has_post_format( 'audio' ) ) :
 							$output .= '<span class="lsearch-format-music" >' . esc_html__( 'Music', 'king' ) . '</span>';
 						endif;

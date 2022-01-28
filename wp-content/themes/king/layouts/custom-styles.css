@@ -1,0 +1,63 @@
+/* Typography
+--------------------------*/
+/* ------CustomCSS------ */
+body {
+	font-family: 'Space Mono';
+}/* ------body------ */
+/* ------header------ */
+.king-cat-list li a:hover {
+	color:#00abba;
+}
+.king-head-nav a, .king-cat-dots, .search-close, .king-head-nav .king-head-nav-a {
+	color:#00abba;
+}
+.king-submit-open, .king-submit-buttons {
+	background-color:#00abba;
+}
+.king-submit-buttons:before{
+	border-bottom-color:#00abba;
+}
+.king-submit.open .king-submit-open {
+	box-shadow: 0px 0px 2px 5px #00abba50;
+}
+.king-top-header {
+	background-color: #00abba;
+	background: -moz-linear-gradient(left, #00abba 0%, #37afba 100%);
+	background: -webkit-linear-gradient(left, #00abba 0%, #37afba 100%);
+	background: linear-gradient(to right, #00abba 0%, #37afba 100%);
+}
+.king-top-header-menu ul ul {
+	background-color: #00abba;
+}
+.king-top-header-menu a {
+	color: #000000;
+}
+.king-top-header-menu .menu-item-has-children:after {
+	color: #000000;
+}
+.king-top-header-icons a {
+	color: #000000;
+	border-color: #000000;
+}
+/* ------footer------ */
+/* ------sidebar------ */
+.first-sidebar ul li a {
+	color:#00a8b7;
+}
+/* ------PostPage------ */
+/* ------KingflixPage------ */
+.kingflix-post-content {
+	background-color:#00abba;
+}
+.kingflix-post-title a,
+.king-editorschoice-title {
+    color:#000000;
+}
+.kingflix-button {
+    color:#bdf200;
+    border-color:#bdf200;
+}
+.kingflix-post-in .cat-links a {
+    color:#bdf200;
+}
+

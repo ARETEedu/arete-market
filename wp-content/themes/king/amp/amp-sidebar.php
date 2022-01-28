@@ -14,6 +14,8 @@
 			<li><a href="<?php echo esc_url( get_post_format_link( 'video' ) ); ?>"><span class="nav-icon nav-video" ></span><?php echo esc_html_e( 'Video', 'king' ) ?></a></li><?php endif; ?>
 		<?php if ( ! get_field( 'hide_image_Link', 'options' ) ) : ?>
 			<li><a href="<?php echo esc_url( get_post_format_link( 'image' ) ); ?>"><span class="nav-icon nav-image" ></span><?php echo esc_html_e( 'Image', 'king' ) ?></a></li><?php endif; ?>
+		<?php if ( ! get_field( 'hide_arlem_Link', 'options' ) ) : //KB CHANGES ?>
+			<li><a href="<?php echo esc_url( get_post_format_link( 'arlem' ) ); ?>"><span class="nav-icon nav-arlem" ></span><?php echo esc_html_e( 'ARLEM', 'king' ) ?></a></li><?php endif; ?>
 		<?php get_template_part( 'template-parts/header-templates/header-parts/newnav' ); ?>
 		</ul>
 		<div class="king-cat-list-mobile">

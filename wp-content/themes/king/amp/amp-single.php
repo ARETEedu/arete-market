@@ -63,7 +63,9 @@
 								get_template_part( 'amp/amp-single-video' );
 							} elseif ( has_post_format( 'image' ) ) {
 								get_template_part( 'amp/amp-single-image' );
-							} else {
+							} elseif ( has_post_format( 'arlem' ) ) { //KB CHANGES
+								get_template_part( 'amp/amp-single-arlem' );
+						 	} else {
 								get_template_part( 'amp/amp-single-post' );
 							}
 						endif;
