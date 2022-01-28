@@ -17,13 +17,11 @@ get_header(); ?>
 <?php
 	$template  = get_field_object( 'single_post_templates', 'options' );
 	$template2 = get_field_object( 'post_template' );
-	echo '<p> GETTING POST TEMPLATE </p>';
 	if ( ! empty( $template2['value'] ) ) {
 		get_template_part( 'template-parts/post-templates/single', 'post-' . $template2['value'] );
 	} elseif ( ! empty( $template['value'] ) ) {
 		get_template_part( 'template-parts/post-templates/single', 'post-' . $template['value'] );
 	} else {
-		echo '<p> HERE </p>';
 		get_template_part( 'template-parts/post-templates/single', 'post-template' );
 	}
 	get_template_part( 'template-parts/post-templates/single-parts/modal-share' );
