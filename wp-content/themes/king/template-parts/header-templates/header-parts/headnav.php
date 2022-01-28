@@ -52,6 +52,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 			?>
 		</li>
 	<?php endif; ?>
+	<?php if ( $hnav && in_array( 'arlem_link', $hnav, true ) ) : //KB CHANGES ?> 
+		<li>
+			<a href="<?php echo esc_url( get_post_format_link( 'arlem' ) ); ?>" class="king-head-nav-a nav-image"><i class="far fa-circle"></i><?php echo esc_html_e( 'ARLEM', 'king' ); ?></a>
+			<?php
+			$imenu = get_field( 'for_arlem_link', 'option' );
+			if ( ! empty( $imenu['for_arlem'] ) ) :
+				echo wp_kses_post( king_mega_menu( $imenu, 'arlem', $imenu['mpost_number'], $imenu['show_in_mega_menu'], 'post', 'f' ) );
+			endif;
+			?>
+		</li>
+	<?php endif; ?>
 	<?php if ( $hnav && in_array( 'musics_link', $hnav, true ) ) : ?>
 		<li>
 			<a href="<?php echo esc_url( get_post_format_link( 'audio' ) ); ?>" class="king-head-nav-a nav-music"><i class="far fa-circle"></i><?php echo esc_html_e( 'Music', 'king' ); ?></a>
