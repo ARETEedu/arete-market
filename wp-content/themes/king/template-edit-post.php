@@ -198,6 +198,15 @@ $current_user   = wp_get_current_user();
 									}
 									echo '<li class="form-categories-item"><input type="checkbox" id="king_post_cat-' . esc_attr( $cat->term_id ) . '" name="king_post_category[]" value="' . esc_attr( $cat->term_id ) . '" ' . esc_attr( $checked ) . ' /><label for="king_post_cat-' . esc_attr( $cat->term_id ) . '">' . esc_attr( $cat->name ) . '</label></li>';
 								endif;
+							} elseif ( $format === 'arlem' ) { //KB CHANEGS
+								$catsfor = get_field( 'category_for', $cat );
+								if ( $catsfor && in_array( 'for_arlem', $catsfor, true ) || ! $catsfor ) :
+									$checked = '';
+									if ( in_array( $cat->term_id, $post_cats_arr ) ) {
+										$checked = 'checked';
+									}
+									echo '<li class="form-categories-item"><input type="checkbox" id="king_post_cat-' . esc_attr( $cat->term_id ) . '" name="king_post_category[]" value="' . esc_attr( $cat->term_id ) . '" ' . esc_attr( $checked ) . ' /><label for="king_post_cat-' . esc_attr( $cat->term_id ) . '">' . esc_attr( $cat->name ) . '</label></li>';
+								endif;
 							} elseif ( $format === 'video' ) {
 								$catsfor = get_field( 'category_for', $cat );
 								if ( $catsfor && in_array( 'for_video', $catsfor, true ) || ! $catsfor ) :
@@ -260,7 +269,7 @@ $current_user   = wp_get_current_user();
 						'field_groups' => array( 'group_60ae46c60a552' ),
 					)
 				);
-			} elseif ( $format === 'video' || $format === 'audio' ) {
+			} elseif ( $format === 'video' || $format === 'audio' || $format === 'arlem') { //KB CHANGES FOLLOW UP
 				?>
 			<div class="king-repeater">
 				<?php

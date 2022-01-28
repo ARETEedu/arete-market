@@ -249,6 +249,7 @@ if ( ! function_exists( 'king_setup' ) ) :
 				'video',
 				'link',
 				'audio',
+				'arlem',
 			)
 		);
 
@@ -469,6 +470,7 @@ function king_get_post_format_slugs() {
 		'quote'   => 'news',
 		'status'  => 'status-updates',
 		'video'   => 'videos',
+		'arlem'	  => 'arlem', //KB changes
 	);
 
 	return $slugs;
@@ -660,6 +662,7 @@ function king_scripts() {
 	wp_enqueue_style( 'custom-styles', KING_THEME_URI . '/layouts/custom-styles.css', array(), THEME_VERSION );
 	wp_enqueue_style( 'googlefont-style', king_google_fonts_url(), array(), '1.0.0' );
 	wp_enqueue_style( 'font-awesome-style', KING_THEME_URI . '/layouts/font-awesome/css/all.min.css', array(), THEME_VERSION );
+	//KB CHANGES FOLLOW UP?
 	if ( is_page_template( 'king_page_kingflix.php' ) || is_singular() && has_post_format( 'video' ) || has_post_format( 'audio' ) ) {
 		wp_enqueue_script( 'video-js', KING_THEME_URI . '/layouts/js/videojs/video.min.js', array( 'jquery' ), '1.0', false );
 		wp_enqueue_style( 'video-js-style', KING_THEME_URI . '/layouts/js/videojs/video-js.css', array(), THEME_VERSION );

@@ -24,6 +24,8 @@ if ( function_exists( 'is_woocommerce' ) && get_field( 'enable_membership', 'opt
 	get_template_part( 'template-parts/single', 'music' );
 } elseif ( has_post_format( 'image' ) ) {
 	get_template_part( 'template-parts/single', 'image' );
+} elseif ( 'arlem' === get_post_type() ) { //KB CHANGES
+	get_template_part( 'template-parts/single', 'arlem' );
 } elseif ( 'poll' === get_post_type() ) {
 	get_template_part( 'template-parts/single', 'poll' );
 } elseif ( 'trivia' === get_post_type() ) {

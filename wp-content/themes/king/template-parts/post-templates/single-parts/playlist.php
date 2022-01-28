@@ -54,7 +54,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		}
 		if ( $videotab ) :
-		if ( $videotype === 'audio' ) :
+		if ( $videotype === 'audio' ) : //KB CHANGES FOLLOW UP
 				?>
 			<audio id="king-audio" class="video-js vjs-default-skin" preload="auto" poster="<?php echo esc_url( $audio_thumb ); ?>" data-setup='{ "controls": true, "preload": "auto" }'>
 				<source src="<?php echo esc_url( $videourl ); ?>" type='audio/mp3'/>

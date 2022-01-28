@@ -54,6 +54,8 @@
 							<a class="simple-post-entry-format" href="<?php echo esc_url( get_post_format_link( 'video' ) ); ?>"><?php echo esc_html_e( 'Video', 'king' ) ?></a>
 						<?php elseif ( has_post_format( 'image' ) ) : ?>
 							<a class="simple-post-entry-format" href="<?php echo esc_url( get_post_format_link( 'image' ) ); ?>"><?php echo esc_html_e( 'Image', 'king' ) ?></a>
+						<?php elseif ( has_post_format( 'arlem' ) ) : ?>
+							<a class="simple-post-entry-format" href="<?php echo esc_url( get_post_format_link( 'arlem' ) ); ?>"><?php echo esc_html_e( 'ARLEM', 'king' ) ?></a>
 						<?php endif; ?>
 					</div>
 					<div class="amp-related-meta">

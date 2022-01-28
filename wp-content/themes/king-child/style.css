@@ -12,7 +12,7 @@ Text Domain: king
 */
 
 /*************** Add your custom css here  ***************/
-.king-submit-open {
+/*.king-submit-open {
     background-color: #00abba;
 }
 
@@ -23,6 +23,21 @@ Text Domain: king
 .king-submit-buttons {
     background-color: #00abba;
 }
+.king-submit-buttons::before {
+    border-bottom-color: #00abba;
+}
+
+.first-sidebar ul li a:hover, .left-sidebar ul li a:hover {
+    color: hsla(185, 100%, 36%, 0.459);
+}
+
+a.wp-block-latest-comments__comment-author {
+    color: hsla(185, 100%, 36%, 0.459);
+}
+
+a.wp-block-latest-comments__comment-link {
+    color: hsla(185, 100%, 36%, 0.459);
+}
 
 body {
 	font-family: 'Space Mono';
@@ -32,7 +47,11 @@ body {
 	font-family: 'Nunito',sans-serif !important;
 }
 
-.current_page_item {
+.main-navigation .current_page_item {
 	font-weight: normal !important;
 	color: #00abba !important;
 }
+
+.page_item:hover {
+	color: #00abba !important;
+}*/

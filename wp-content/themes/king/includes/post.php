@@ -46,6 +46,23 @@ if ( ! function_exists( 'king_posttypes' ) ) :
 				'menu_icon'     => 'dashicons-chart-bar',
 			)
 		);
+		//KB CHANGES
+		register_post_type(
+			'arlem',
+			array(
+				'labels'        => array(
+					'name'          => __( 'ARLEM' ),
+					'singular_name' => __( 'ARLEM' ),
+				),
+				'public'        => true,
+				'has_archive'   => true,
+				'rewrite'       => array( 'slug' => 'arlem' ),
+				'menu_position' => 5,
+				'supports'      => array( 'title', 'editor', 'comments', 'thumbnail' ),
+				'taxonomies'    => array( 'post_tag', 'category' ),
+				'menu_icon'     => 'dashicons-welcome-learn-more',
+			)
+		);
 		register_post_type(
 			'trivia',
 			array(
@@ -90,7 +107,7 @@ if ( ! function_exists( 'add_my_post_types_to_query' ) ) :
 	 */
 	function add_my_post_types_to_query( $query ) {
 		if ( is_home() && $query->is_main_query() || $query->is_search || $query->is_category || $query->is_tag ) {
-			$query->set( 'post_type', array( 'post', 'list', 'poll', 'trivia' ) );
+			$query->set( 'post_type', array( 'post', 'list', 'poll', 'trivia', 'arlem' ) ); //KB add arlem post type
 		}
 		return $query;
 	}
@@ -103,7 +120,7 @@ if ( ! function_exists( 'king_post_types' ) ) :
 	 * @return     array  ( description_of_the_return_value )
 	 */
 	function king_post_types() {
-		$ptype = array( 'post', 'list', 'poll', 'trivia' );
+		$ptype = array( 'post', 'list', 'poll', 'trivia', 'arlem' ); //KB change
 		return $ptype;
 	}
 endif;
@@ -968,6 +985,8 @@ if ( ! function_exists( 'king_post_format' ) ) :
 			$return .= '<a href="' . esc_url( get_post_format_link( 'image' ) ) . '" class="pformat-image nav-image">' . esc_html__( 'Image', 'king' ) . '<i class="far fa-circle"></i></a>';
 		elseif ( has_post_format( 'audio' ) ) :
 			$return .= '<a href="' . esc_url( get_post_format_link( 'audio' ) ) . '" class="pformat-music nav-music">' . esc_html__( 'music', 'king' ) . '<i class="far fa-circle"></i></a>';
+		elseif ( 'arlem' === get_post_type() ) : //KB CHANGES TODO FOLLOW UP pformat-image nav-image
+			$return .= '<a href="' . esc_url( get_post_format_link( 'arlem' ) ) . '" class="pformat-arlem nav-arlem">' . esc_html__( 'ARLEM', 'king' ) . '<i class="far fa-circle"></i></a>';
 		elseif ( 'list' === get_post_type() ) :
 			$return .= '<a href="' . esc_url( get_post_type_archive_link( 'list' ) ) . '" class="pformat-list nav-list">' . esc_html__( 'List', 'king' ) . '<i class="far fa-circle"></i></a>';
 		elseif ( 'poll' === get_post_type() ) :

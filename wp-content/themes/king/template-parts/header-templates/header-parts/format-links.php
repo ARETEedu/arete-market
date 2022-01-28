@@ -33,6 +33,12 @@ if ( $hnav && in_array( 'news_link', $hnav, true ) ) :
 		<i class="far fa-circle"></i><?php echo esc_html_e( 'Image', 'king' ); ?>
 	</a>
 <?php endif; ?>
+<!-- KB CHANGES follow up nav-arlem-->
+<?php if ( $hnav && in_array( 'arlem_link', $hnav, true ) ) : ?>
+	<a href="<?php echo esc_url( get_post_format_link( 'arlem' ) ); ?>" class="nav-arlem">
+		<i class="far fa-circle"></i><?php echo esc_html_e( 'ARLEM', 'king' ); ?>
+	</a>
+<?php endif; ?>
 <?php if ( $hnav && in_array( 'musics_link', $hnav, true ) ) : ?>
 	<a href="<?php echo esc_url( get_post_format_link( 'audio' ) ); ?>" class="nav-music">
 		<i class="far fa-circle"></i><?php echo esc_html_e( 'Music', 'king' ); ?>
