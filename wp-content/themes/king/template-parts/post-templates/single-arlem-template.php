@@ -1,7 +1,7 @@
 <?php
 /**
  * KB Single arlem page.
- * TODO write
+ * TODO write -THIS IS THE ONE I'M WRITING
  * @package King
  */
 
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <div id="primary" class="content-area">
-	<main id="main" class="site-main post-page single-image">
+	<main id="main" class="site-main post-page single-arlem">
 		<?php if ( get_field( 'ads_above_content', 'option' ) ) : ?>
 			<div class="ads-postpage"><?php $ad_above = get_field( 'ads_above_content','options' ); echo do_shortcode( $ad_above ); ?></div>
 		<?php endif; ?>
@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php get_template_part( 'template-parts/post-templates/single-parts/posttitle' ); ?>
 				<?php get_template_part( 'template-parts/post-templates/single-parts/badges' ); ?>
 				<?php if ( get_field( 'nsfw_post' ) && ! is_user_logged_in() ) : ?>
-				<div class="post-video nsfw-post-page">
+				<div class="post-arlem nsfw-post-page">
 					<a href="<?php echo esc_url( site_url() . '/' . $GLOBALS['king_login'] ); ?>">
 						<i class="fa fa-paw fa-3x"></i>
 						<div><h1><?php echo esc_html_e( 'Not Safe For Work', 'king' ); ?></h1></div>
@@ -40,16 +40,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 							wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'king' ), array( 'span' => array( 'class' => array() ) ) ),
 							the_title( '<span class="screen-reader-text">"', '"</span>', false )
 						) );
-
+						
+						if ( get_field( 'media_lists' ) ) {
+							get_template_part( 'template-parts/post-templates/single-parts/playlist' );
+						} else {
+							get_template_part( 'template-parts/post-templates/single-parts/video' );
+						}
+						
+						get_template_part( 'template-parts/post-templates/single-parts/arlem' );
 						wp_link_pages( array(
 							'before' => '<div class="page-links">',
 							'after'  => '</div>',
 						) );
 						?>
 					</div><!-- .entry-content -->
-
-
 				<?php endif; ?>
+				
 				<?php get_template_part( 'template-parts/post-templates/single-parts/nextprev' ); ?>
 			</div>
 			<?php get_template_part( 'template-parts/post-templates/single-parts/single-boxes' ); ?>

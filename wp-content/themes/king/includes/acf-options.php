@@ -13215,7 +13215,35 @@ acf_add_local_field_group(array(
     'description' => '',
     'show_in_rest' => 0,
 ));
-
+//KB changes
+acf_add_local_field_group(array(
+    'key' => 'group_99bc8b2c4a3e8',
+    'title' => 'ARLEM upload',
+    'fields' => array(
+        array(
+            'key' => 'field_99f5335001eed',
+            'label' => 'upload',
+            'name' => 'arlem_upload',
+            'type' => 'file',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => array(
+                array(
+                ),
+            ),
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'return_format' => 'array',
+            'library' => 'uploadedTo',
+            'min_size' => '',
+            'max_size' => 2000,
+            'mime_types' => 'zip',
+        ),
+    )
+)); 
 acf_add_local_field_group(array(
     'key' => 'group_58bc8b2c4a3e8',
     'title' => 'video url',
@@ -13454,8 +13482,8 @@ acf_add_local_field_group(array(
                     'return_format' => 'array',
                     'library' => 'uploadedTo',
                     'min_size' => '',
-                    'max_size' => 150,
-                    'mime_types' => 'mp4, flv, mp3, mov',
+                    'max_size' => 150,     //ARLEM MAX SIZE
+                    'mime_types' => 'mp4, flv, mp3, mov, zip, json', //KB adding zip for ARLEM 
                 ),
                 array(
                     'key' => 'field_5ee7d4f37603f',

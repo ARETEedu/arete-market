@@ -1,7 +1,7 @@
 <?php
 /**
  * Single ARLEM.
- *
+ * KB CHANGES
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package king

@@ -716,6 +716,20 @@ function king_disallow_personal_uploads( $existing_mimes = array() ) {
 add_filter( 'upload_mimes', 'king_disallow_personal_uploads' );
 
 /**
+ * KB: allow additional mime types
+ *
+ * @param [type] $existing_mimes existing mimes.
+ * @return array
+ */
+function add_custom_upload_mimes( $existing_mimes ){
+	$existing_mimes['zip']  = 'application/zip';
+	$existing_mimes['json']  = 'application/json';
+	$existing_mimes['gzip']  = 'application/gzip';
+	return $existing_mimes;
+}
+add_filter('upload_mimes', 'add_custom_upload_mimes');
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/includes/customizer-head.php';
@@ -1004,4 +1018,3 @@ if ( king_plugin_active( 'ACF' ) ) {
 if ( function_exists( 'instant_articles_init' ) ) {
 	require_once KING_INCLUDES_PATH . 'plugins/facebook-instant-articles.php';
 }
-

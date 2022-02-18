@@ -14,3 +14,7 @@ Please note that the King Theme code (in `wp-content/themes/king` and `king-chil
 Recommended: download MAMP https://www.mamp.info/en/downloads/ and copy the contents of this folder into the htdocs/wordpress/ folder. 
 
 Data: the file `local.sql` contains a snapshot of the database with the correct settings for the theme, plus the admin user 'admin' (password admin).
+
+## New users
+
+Have to be "authors" to upload content.
