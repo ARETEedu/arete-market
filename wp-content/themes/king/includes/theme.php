@@ -438,65 +438,6 @@ function king_process_simple_follow() {
 	}
 }
 
-/*
- * KB changes - notify if user needs to complete profile
- */
-function king_notify_to_complete_profile() {
-	//Get POST ID for complete profile
-	$post_id      = ( isset( $_REQUEST['post_id'] ) && is_numeric( $_REQUEST['post_id'] ) ) ? $_REQUEST['post_id'] : '';
-	$result       = array();
-	
-	// Get plugin options.
-	if ( '' !== $post_id ) {
-		
-			if ( is_user_logged_in() ) {
-				$user_id           = get_current_user_id();
-				king_create_notify( $post_id, 'follow', 'f' );
-		} else {
-			if ( is_user_logged_in() ) {
-				$user_id           = get_current_user_id();
-				$post_users        = king_post_user_follows( $user_id, $post_id );
-				$user_follow_count = get_user_option( '_user_follow_count', $user_id );
-				$user_follow_count = ( isset( $user_follow_count ) && is_numeric( $user_follow_count ) ) ? $user_follow_count : 0;
-				if ( $user_follow_count > 0 ) {
-					update_user_option( $user_id, '_user_follow_count', --$user_follow_count );
-				}
-				if ( $post_users ) {
-					$uid_key = array_search( $user_id, $post_users );
-					unset( $post_users[ $uid_key ] );
-					update_user_meta( $post_id, 'wp__user_followd', $post_users );
-					if ( get_field( 'enable_notification', 'options' ) ) {
-						$knotify_comment = array('type' => 'follow', 'postid' => $post_id, 'who' => $user_id );
-						delete_user_meta( $post_id, 'king_notify', $knotify_comment );
-						$kncount = get_user_meta( $post_id, 'king_notify_count', true );
-						if (empty($kncount) || $kncount == '') {
-							$kncount = 0;
-						} else {
-							$kntotal = (int) $kncount - 1;
-						}
-						update_user_meta( $post_id, 'king_notify_count', $kntotal );
-					}
-				}
-			}
-			$follow_count       = ( $count > 0 ) ? --$count : 0;
-			$response['status'] = 'unfollowd';
-			$response['icon']   = king_get_followd_icon();
-		}
-
-		update_user_option( $post_id, '_post_follow_count', $follow_count );
-		update_user_meta( $post_id, '_post_follow_modified', date( 'Y-m-d H:i:s' ) );
-
-		$response['count'] = king_get_follow_count( $follow_count, $post_id );
-		if ( true === $disabled ) {
-			wp_redirect( get_permalink( $post_id ) );
-			exit();
-
-		} else {
-			wp_send_json( $response );
-		}
-	}
-}
-
 /**
  * Utility to test if the post is already followd.
  *
