@@ -13482,8 +13482,8 @@ acf_add_local_field_group(array(
                     'return_format' => 'array',
                     'library' => 'uploadedTo',
                     'min_size' => '',
-                    'max_size' => 150,     //ARLEM MAX SIZE
-                    'mime_types' => 'mp4, flv, mp3, mov, zip, json', //KB adding zip for ARLEM 
+                    'max_size' => 150,
+                    'mime_types' => 'mp4, flv, mp3, mov', 
                 ),
                 array(
                     'key' => 'field_5ee7d4f37603f',

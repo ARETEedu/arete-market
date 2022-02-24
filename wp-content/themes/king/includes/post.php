@@ -786,7 +786,7 @@ if ( king_plugin_active( 'ACF' ) ) :
 					}
 				}
 			} else {
-				$ftext .= '<li class="king-clean-center"><i class="fas fa-fish"></i><br>' . esc_html__( 'Nothing new right now !', 'king' ) . '</li>';
+				$ftext .= '<li class="king-clean-center"><i class="fas fa-battery-empty"></i><br>' . esc_html__( 'Nothing new right now !', 'king' ) . '</li>';
 			}
 			delete_option( 'king_flag_count' );
 			echo $ftext;

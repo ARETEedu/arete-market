@@ -1018,3 +1018,15 @@ if ( king_plugin_active( 'ACF' ) ) {
 if ( function_exists( 'instant_articles_init' ) ) {
 	require_once KING_INCLUDES_PATH . 'plugins/facebook-instant-articles.php';
 }
+
+/*
+ *
+ * KB CHANGE
+ * Add notification if user hasn't completed thier profile
+ * post id is hardcoded to match page id of user settings in database
+ */
+function user_profile_incomplete($user_id) {
+	king_create_notify( 6, 'completeProfile' );		
+}
+
+add_action( 'user_register', 'user_profile_incomplete', 10, 1 );

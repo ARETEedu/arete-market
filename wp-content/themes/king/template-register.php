@@ -291,7 +291,7 @@ endif;
 		<?php endif; ?>	
 		<?php if ( get_field( 'enable_recaptcha', 'options' ) ) : ?>
 			<div class="king-form-group">
-				<div class="g-recaptcha" data-sitekey="<?php the_field( 'recaptcha_key', 'options' ); ?>"></div>
+				<div class="g-recaptcha" style="height:200px;" data-sitekey="<?php the_field( 'recaptcha_key', 'options' ); ?>"></div>
 				<?php if ( isset( $king_register_errors['recaptcha'] ) ) { ?>
 				<div class="king-error"><?php echo esc_attr( $king_register_errors['recaptcha'] ); ?></div>
 				<?php } ?>		

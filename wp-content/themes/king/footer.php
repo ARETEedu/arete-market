@@ -100,7 +100,8 @@ endif;
 	<aside id="king-cookie" class="king-cookie" style="display: none;">
 		<p class="king-cookie-content"><?php the_field( 'cookie_popup_content', 'options' ); ?></a></p>
 		<div class="king-cookie-footer">
-			<a id="king-cookie-accept" class="king-cookie-accept" href="#"><?php the_field( 'cookie_button_text', 'options' ); ?></a>
+			<!-- KB Changes --> 
+			<a id="king-cookie-accept" class="king-cookie-accept" href="<?php get_option( 'siteurl' ) . '/privacy-policy/' ?>" ><?php the_field( 'cookie_button_text', 'options' ); ?></a>
 		</div>
 	</aside>
 <?php endif; ?>
