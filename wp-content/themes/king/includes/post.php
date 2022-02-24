@@ -14,6 +14,10 @@ if ( ! function_exists( 'king_posttypes' ) ) :
 	 * Post Types.
 	 */
 	function king_posttypes() {
+		/*
+		 * KB Changes: for simplicity, hide these post types from the admin menu
+		 */
+		/* 
 		register_post_type(
 			'list',
 			array(
@@ -46,23 +50,6 @@ if ( ! function_exists( 'king_posttypes' ) ) :
 				'menu_icon'     => 'dashicons-chart-bar',
 			)
 		);
-		//KB CHANGES
-		register_post_type(
-			'arlem',
-			array(
-				'labels'        => array(
-					'name'          => __( 'ARLEM' ),
-					'singular_name' => __( 'ARLEM' ),
-				),
-				'public'        => true,
-				'has_archive'   => true,
-				'rewrite'       => array( 'slug' => 'arlem' ),
-				'menu_position' => 5,
-				'supports'      => array( 'title', 'editor', 'comments', 'thumbnail' ),
-				'taxonomies'    => array( 'post_tag', 'category' ),
-				'menu_icon'     => 'dashicons-welcome-learn-more',
-			)
-		);
 		register_post_type(
 			'trivia',
 			array(
@@ -92,6 +79,23 @@ if ( ! function_exists( 'king_posttypes' ) ) :
 				'menu_position' => 5,
 				'supports'      => array( 'title', 'thumbnail' ),
 				'menu_icon'     => 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyMCAyMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjAgMjAiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0E3QUFBRCIgZD0iTTEwLDAuNWMtNS4zLDAtOS41LDQuMy05LjUsOS41czQuMyw5LjUsOS41LDkuNXM5LjUtNC4zLDkuNS05LjVTMTUuMywwLjUsMTAsMC41eiBNNS41LDE0LjFINC4yDQoJQzMuNSwxNC4xLDMsMTMuNiwzLDEzVjdjMC0wLjYsMC41LTEuMSwxLjEtMS4xaDEuM1YxNC4xeiBNMTMuMiwxMy45YzAsMC44LTAuNywxLjUtMS41LDEuNUg4LjNjLTAuOCwwLTEuNS0wLjctMS41LTEuNVY2LjENCgljMC0wLjgsMC43LTEuNSwxLjUtMS41aDMuNWMwLjgsMCwxLjUsMC43LDEuNSwxLjVWMTMuOXogTTE2LDE0LjFoLTEuM1Y1LjlIMTZjMC42LDAsMS4yLDAuNSwxLjIsMS4xVjEzDQoJQzE3LjEsMTMuNiwxNi42LDE0LjEsMTYsMTQuMXoiLz4NCjxsaW5lIGZpbGw9Im5vbmUiIHgxPSIxMyIgeTE9IjE2LjUiIHgyPSIxMyIgeTI9IjE1LjQiLz4NCjxsaW5lIGZpbGw9Im5vbmUiIHgxPSIxMyIgeTE9IjQuNiIgeDI9IjEzIiB5Mj0iMy4xIi8+DQo8L3N2Zz4NCg==',
+			)
+		);*/
+		//KB CHANGES
+		register_post_type(
+			'arlem',
+			array(
+				'labels'        => array(
+					'name'          => __( 'ARLEM' ),
+					'singular_name' => __( 'ARLEM' ),
+				),
+				'public'        => true,
+				'has_archive'   => true,
+				'rewrite'       => array( 'slug' => 'arlem' ),
+				'menu_position' => 5,
+				'supports'      => array( 'title', 'editor', 'comments', 'thumbnail' ),
+				'taxonomies'    => array( 'post_tag', 'category' ),
+				'menu_icon'     => 'dashicons-welcome-learn-more',
 			)
 		);
 	}
