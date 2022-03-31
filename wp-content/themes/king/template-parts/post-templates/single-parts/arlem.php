@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<div class="post-arlem <?php echo esc_attr( $floating ); ?>">	
+<div class="post-arlem">	
 	<?php $download_link = get_field( 'arlem_upload', get_the_ID() ) ;
 	$url = 	$download_link['url'];
 	

@@ -16079,7 +16079,7 @@ acf_add_local_field_group(array(
                 'class' => '',
                 'id' => '',
             ),
-            'default_value' => 'Our website uses cookies to improve your experience. Learn more about: <a href="#">Cookie Policy</a>',
+            'default_value' => 'Our website uses cookies to improve your experience. Learn more about: <a href="https://arete.market/privacy-policy/">Cookie Policy</a>',
             'placeholder' => '',
             'maxlength' => '',
             'rows' => 4,

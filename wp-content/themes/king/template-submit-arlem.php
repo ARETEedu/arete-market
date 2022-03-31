@@ -12,7 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 $GLOBALS['hide'] = 'hide';
 global $king_submit_errors;
 
-
 if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_POST['king_post_upload_form_submitted'], 'king_post_upload_form' ) ) {
 
 	//Allow users to submit sample video
@@ -23,7 +22,7 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 
 	$title    = sanitize_text_field( $_POST['king_post_title'] );
 	$tags     = sanitize_text_field( $_POST['king_post_tags'] );
-	$content  = stripslashes( $_POST['king_post_content'] );
+	$content  = sanitize_text_field( $_POST['king_post_content'] );
 	$thumb    = sanitize_text_field( $_POST['acf']['field_58f5594a975cb'] );
 	
 	$category = isset( $_POST['king_post_category'] ) ? $_POST['king_post_category'] : '';
@@ -41,8 +40,23 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 		$arlem_upload = wp_unslash( $_POST['acf']['field_99f5335001eed'] ); // Input var okey.
 	}
 
-	//Validation
 	$king_submit_errors = array();
+	$thumbnail_in_arlem = false;
+
+	//Validation
+	//There must be arlem files
+	if ( trim( $arlem_upload ) === '') {
+		$king_submit_errors['arlem_empty'] = esc_html__( 'There is no ARLEM folder.', 'king' );
+	} 
+	else  {
+		$thumbnail_in_arlem = apply_filters( 'check_arlem_thumbnail', $arlem_upload );
+		
+		$retval = apply_filters( 'verify_arlem_file', $arlem_upload );
+		if (trim( $retval ) !== '') {
+			$king_submit_errors['arlem_unverified'] = esc_html__( 'The ARLEM folder contains '.$retval, 'king' );	
+		}
+	}
+	
 	//Title must not be too long
 	if ( get_field( 'maximum_title_length', 'option' ) ) {
 		$title_length = get_field( 'maximum_title_length', 'option' );
@@ -68,18 +82,13 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 		$king_submit_errors['content_empty'] = esc_html__( 'Content is too long.', 'king' );
 	}
 	$no_video =  (trim( $video_url ) === '') && (trim( $video_upload ) === '') && (trim( $video_embed ) === '' );
-	$no_thumbnail = trim( $thumb ) === '';
+	$no_thumbnail = trim( $thumb ) === '' && !$thumbnail_in_arlem;
 	//There must be a thumbnail image OR a video
 	if ($no_thumbnail && $no_video) {
 		$king_submit_errors['image_empty'] = esc_html__( 'Either a thumbnail or video is required.', 'king' );
 	}		
-	//Video is optoinal
+	//Video is optional
 
-	//There must be arlem files
-	if ( trim( $arlem_upload ) === '') {
-		$king_submit_errors['arlem_empty'] = esc_html__( 'There is no ARLEM folder.', 'king' );
-	}
-	
 	//If there are no errors, set the post status
 	if ( empty( $king_submit_errors ) ) {
 		switch ( $_POST['submit_type'] ) {
@@ -125,36 +134,42 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 		update_field( 'arlem_upload', $arlem_upload, $post_id );
 		update_post_meta( $post_id, '_arlem_upload', 'field_99f5335001eed' );
 
+		//$no_thumbnail : user hasn't uploaded, and there isn't one in the ARLEM folder
 		//If there is a video, get the thumbnail for it
-		if (trim( $video_url ) !== '') {
+		if (trim( $video_url !== '')) {
 			update_field( 'video-url', $video_url, $post_id );
 			update_post_meta( $post_id, '_video-url', 'field_587be2665e807' );
-			
-			require_once KING_INCLUDES_PATH . 'videothumbs.php';
-			$ktype = king_source( $video_url );
-
-			if ( 'vimeo.com' === $ktype || 'dailymotion.com' === $ktype || 'metacafe.com' === $ktype || 'vine.co' === $ktype || 'instagram.com' === $ktype || 'vid.me' === $ktype || 'tiktok.com' === $ktype || 'soundcloud.com' === $ktype ) {
-				$image_url = king_get_thumb( $video_url );
-			} elseif ( 'youtube.com' === $ktype || 'youtu.be' === $ktype ) {
-				$image_url = king_youtube( $video_url );
-			} elseif ( 'facebook.com' === $ktype ) {
-				$image_url = king_facebook( $video_url );
-			} else {
-				$image_url = king_get_thumb( $video_url );
-			}
+		
 			if ($no_thumbnail) {
+				require_once KING_INCLUDES_PATH . 'videothumbs.php';
+				$ktype = king_source( $video_url );
+
+				if ( 'vimeo.com' === $ktype || 'dailymotion.com' === $ktype || 'metacafe.com' === $ktype || 'vine.co' === $ktype || 'instagram.com' === $ktype || 'vid.me' === $ktype || 'tiktok.com' === $ktype || 'soundcloud.com' === $ktype ) {
+					$image_url = king_get_thumb( $video_url );
+				} elseif ( 'youtube.com' === $ktype || 'youtu.be' === $ktype ) {
+					$image_url = king_youtube( $video_url );
+				} elseif ( 'facebook.com' === $ktype ) {
+					$image_url = king_facebook( $video_url );
+				} else {
+					$image_url = king_get_thumb( $video_url );
+				}
 				$attach_id = king_upload_user_file_video( $image_url , $post_id );
 				set_post_thumbnail( $post_id, $attach_id );
-			} else {
-				set_post_thumbnail( $post_id, $thumb );
 			}
+		} 
+		
+		do_action( 'acf/save_post', $post_id );
+
+		if ($thumbnail_in_arlem) {
+			$thumb = apply_filters( 'set_arlem_thumbnail', $arlem_upload, $post_id );
+			update_post_meta( $post_id, '_thumbnail_id', 'field_58f5594a975cb' );
+			set_post_thumbnail( $post_id, $thumb );
 		} else {
 			set_post_thumbnail( $post_id, $thumb );
 		}
-
-		//Finally, save
-		do_action( 'acf/save_post', $post_id );
-
+		
+		$d = get_post_thumbnail_id($post_id);
+		error_log("POST SAVE THUMBNAIL:".$d);
 		//and redirect to the published post
 		if ( $post_id ) {
 			$permalink = get_permalink( $post_id );
@@ -278,8 +293,11 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 						</div>
 					</div>
 					<span class="help-block"><?php esc_html_e( 'This must be in zip format', 'king' ) ?></span>
-					<?php if ( isset( $king_submit_errors['arlem_empty'] ) ) : ?>
+					<?php if ( isset( $king_submit_errors['arlem_empty'] )  ) : ?>
 						<div class="king-error"><?php echo esc_attr( $king_submit_errors['arlem_empty'] ); ?></div>
+					<?php endif; ?>
+					<?php if ( isset( $king_submit_errors['arlem_unverified'] )  ) : ?>
+						<div class="king-error"><?php echo esc_attr( $king_submit_errors['arlem_unverified'] ); ?></div>
 					<?php endif; ?>
 					<!-- Upload Image (optional) -->
 					<div class="acf-field acf-field-image acf-field-58f5594a975cb" data-name="_thumbnail_id" data-type="image" data-key="field_58f5594a975cb">
