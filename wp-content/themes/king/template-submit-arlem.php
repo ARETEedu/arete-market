@@ -26,6 +26,7 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 	$thumb    = sanitize_text_field( $_POST['acf']['field_58f5594a975cb'] );
 	
 	$category = isset( $_POST['king_post_category'] ) ? $_POST['king_post_category'] : '';
+	$licence = isset( $_POST['king_post_licence'] ) ? $_POST['king_post_licence'] : '';
 
 	if ( isset( $_POST['video_url'] ) ) {
 		$video_url = wp_unslash( $_POST['video_url'] ); // Input var okey.
@@ -88,6 +89,10 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 		$king_submit_errors['image_empty'] = esc_html__( 'Either a thumbnail or video is required.', 'king' );
 	}		
 	//Video is optional
+	//Licence must be selected
+	if ( trim( $licence ) === '' ) {
+		$king_submit_errors['licence_empty'] = esc_html__( 'You must select a licence.', 'king' );
+	}
 
 	//If there are no errors, set the post status
 	if ( empty( $king_submit_errors ) ) {
@@ -134,6 +139,10 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 		update_field( 'arlem_upload', $arlem_upload, $post_id );
 		update_post_meta( $post_id, '_arlem_upload', 'field_99f5335001eed' );
 
+		//Update the licence field
+		update_field( 'licence', $licence, $post_id );
+		update_post_meta( $post_id, '_licence', 'field_5aaalicencesc' );
+
 		//$no_thumbnail : user hasn't uploaded, and there isn't one in the ARLEM folder
 		//If there is a video, get the thumbnail for it
 		if (trim( $video_url !== '')) {
@@ -160,6 +169,8 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 		
 		do_action( 'acf/save_post', $post_id );
 
+		//For some reason, have to set the thumbnail post save when it's from an arlem upload,
+		// or it wipes the _thumbnail_id field
 		if ($thumbnail_in_arlem) {
 			$thumb = apply_filters( 'set_arlem_thumbnail', $arlem_upload, $post_id );
 			update_post_meta( $post_id, '_thumbnail_id', 'field_58f5594a975cb' );
@@ -167,9 +178,7 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 		} else {
 			set_post_thumbnail( $post_id, $thumb );
 		}
-		
-		$d = get_post_thumbnail_id($post_id);
-		error_log("POST SAVE THUMBNAIL:".$d);
+
 		//and redirect to the published post
 		if ( $post_id ) {
 			$permalink = get_permalink( $post_id );
@@ -258,9 +267,33 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 						?>
 					</ul>
 				</div>
-				<div class="king-form-group">
-				<span class="help-block"><?php esc_html_e( 'Select the categories that best describe your model', 'king' ) ?></span>			
-					<!-- Upload AR Files -->
+				<!-- LICENCES --> 
+				<?php $field = get_field_object('field_5aaalicencesc', get_the_ID()); ?>
+				<div class="king-form-group form-licences" >
+					<span class="form-label"><?php esc_html_e( 'Select Licence', 'king' ); ?></span>
+						<ul>
+							<?php
+							foreach ( $field['choices'] as $licence ) {
+								echo '<li class="form-licences-item"><input type="checkbox" id="king_post_licence-' . esc_attr( $licence ) . '" name="king_post_licence[]" value="' . esc_attr( $licence ) . '" /><label for="king_post_licence-' . esc_attr( $licence ) . '">' . esc_attr( $licence ) . '</label></li>';
+							}
+							?>
+						</ul>
+				</div>
+				<!-- Check there is a licence -->
+				<?php if ( isset( $king_submit_errors['licence_empty'] ) ) : ?>
+					<div class="king-error"><?php echo esc_attr( $king_submit_errors['licence_empty'] ); ?></div>
+				<?php endif; ?>
+
+				<!-- Upload AR Files -->
+				<label><?php esc_html_e( 'Add your zipped ARLEM folder.', 'king' ) ?></label>
+					<?php if ( isset( $king_submit_errors['arlem_empty'] )  ) : ?>
+						<div class="king-error"><?php echo esc_attr( $king_submit_errors['arlem_empty'] ); ?></div>
+					<?php endif; ?>
+					<?php if ( isset( $king_submit_errors['arlem_unverified'] )  ) : ?>
+						<div class="king-error"><?php echo esc_attr( $king_submit_errors['arlem_unverified'] ); ?></div>
+					<?php endif; ?>
+					
+				
 					<div class="acf-field acf-field-file acf-field-5ee7d4327603e" data-name="arlem_upload" data-type="file" data-key="field_99f5335001eed" data-conditions="[[{&quot;field&quot;:&quot;field_5ee7d3c77603d&quot;,&quot;operator&quot;:&quot;==&quot;,&quot;value&quot;:&quot;1&quot;}]]">
 						<div class="acf-input">
 							<div class="acf-file-uploader" data-library="uploadedTo" data-mime_types="zip" data-uploader="wp">
@@ -287,19 +320,13 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 									</div>
 								</div>
 								<div class="hide-if-value">
-									<p><a data-name="add" class="acf-button button" href="#"><?php esc_html_e( 'Add File', 'king' ); ?></a></p>
+									<p><a data-name="add" class="acf-button button" href="#"><?php esc_html_e( 'Add ARLEM File', 'king' ); ?></a></p>
 								</div>
 							</div>
 						</div>
 					</div>
-					<span class="help-block"><?php esc_html_e( 'This must be in zip format', 'king' ) ?></span>
-					<?php if ( isset( $king_submit_errors['arlem_empty'] )  ) : ?>
-						<div class="king-error"><?php echo esc_attr( $king_submit_errors['arlem_empty'] ); ?></div>
-					<?php endif; ?>
-					<?php if ( isset( $king_submit_errors['arlem_unverified'] )  ) : ?>
-						<div class="king-error"><?php echo esc_attr( $king_submit_errors['arlem_unverified'] ); ?></div>
-					<?php endif; ?>
 					<!-- Upload Image (optional) -->
+					<label><?php esc_html_e( 'Add an image to your post - if the uploaded zip contains a file thumbnail.jpg, or you are adding a video, you do not need to add an image', 'king' ) ?></label>
 					<div class="acf-field acf-field-image acf-field-58f5594a975cb" data-name="_thumbnail_id" data-type="image" data-key="field_58f5594a975cb">
 						<div class="acf-input">
 							<div class="acf-image-uploader" data-preview_size="medium" data-library="uploadedTo" data-mime_types="jpg, png, gif, jpeg, webp" data-uploader="wp">
@@ -409,8 +436,9 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 								<?php endif; ?>
 
 						</div>
-					</div>
-
+					
+				<label><?php esc_html_e( 'Describe your ARLEM content...', 'king' ) ?></label>
+					
 				<!-- Check there is an image -->
 				<?php if ( isset( $king_submit_errors['image_empty'] ) ) : ?>
 					<div class="king-error"><?php echo esc_attr( $king_submit_errors['image_empty'] ); ?></div>

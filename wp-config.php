@@ -73,8 +73,12 @@ define('NONCE_SALT',       'fh00Yxe49mHdjusJkuePQ4v2GkucnIPlPR+4iLdaxPgAf23TCWR0
  */
 $table_prefix = 'wp_';
 
+define('WP_TEMP_DIR', 'Users/katharinefitzpatrick/Local\ Sites/oerxr/temp');
 
-
+/** Secret key for JWT tokens. */
+/** https://wordpress.org/plugins/jwt-authentication-for-wp-rest-api/ */
+define('JWT_AUTH_SECRET_KEY', 'U0>MhmR-{C0}_N4uf/$m1CZ|Y+m2-U&!%j028O[v0!cJ{2M,)=r]8bPQ=F%&l+!o');
+define('JWT_AUTH_CORS_ENABLE', true);
 
 /* That's all, stop editing! Happy publishing. */
 
@@ -85,3 +89,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
+

@@ -2133,6 +2133,68 @@ acf_add_local_field_group(array(
     'show_in_rest' => false,
 ));
 
+/*
+ * KB Licensing Options
+ * group_5aaalicencesc
+ */ 
+acf_add_local_field_group(array(
+    'key' => 'group_5aaalicencesc',
+    'title' => 'Licensing Options',
+    'fields' => 
+        array(
+            array(
+                'key' => 'field_5aaalicencesc',
+                'label' => 'Licenses',
+                'name' => 'licenses',
+                'type' => 'radio',
+                'instructions' => '',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'choices' => array( //KB add more licences here
+                    'CC BY' => 'Creative Commons',
+                    'CC BY-SA' => 'Creative Commons SA',
+                ),
+                'allow_null' => 1,
+                'other_choice' => 0,
+                'default_value' => '',
+                'layout' => 'horizontal',
+                'return_format' => 'value',
+                'save_other_choice' => 0,
+            ),     
+        ),
+
+    'location' => array(
+        array(
+            array(
+                'param' => 'options_page',
+                'operator' => '==',
+                'value' => 'acf-options-licences',
+            ),
+        ),
+        array(
+            array(
+                'param' => 'post_type',
+                'operator' => '==',
+                'value' => 'arlem',
+            ),
+        ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => true,
+    'description' => '',
+    'show_in_rest' => false,
+));
+
 acf_add_local_field_group(array(
     'key' => 'group_5aaadfdfcb26c',
     'title' => 'Extra Options',
