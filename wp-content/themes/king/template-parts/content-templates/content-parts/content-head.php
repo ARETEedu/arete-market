@@ -29,6 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
 	<?php if ( get_post_status( get_the_ID() ) === 'draft' ) : ?>
-		<a href="<?php echo esc_url( add_query_arg( 'term', get_the_ID(), home_url( $GLOBALS['king_updte'] . '/' ) ) ); ?>" class="king-fedit"><i class="fa fa-pencil" aria-hidden="true"></i><?php echo esc_html_e( 'Edit', 'king' ); ?></a>
+		<!-- add_query_arg( 'term', changed to add_query_arg( 'post', -->
+		<a href="<?php echo esc_url( add_query_arg( 'post', get_the_ID(), home_url( $GLOBALS['king_updte'] . '/' ) ) ); ?>" class="king-fedit"><i class="fa fa-pencil" aria-hidden="true"></i><?php echo esc_html_e( 'Edit', 'king' ); ?></a>
 	<?php endif; ?>
 </div><!-- .article-meta-head -->

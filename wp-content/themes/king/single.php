@@ -40,5 +40,6 @@ king_postviews( get_the_ID(), 'count' );
 
 ?>
 <?php if ( get_post_status( get_the_ID() ) === 'pending' ) : ?>
-	<div class="king-pending"><?php esc_html_e( 'This post will be checked and approved shortly.', 'king' ); ?></div>
+	<!-- KB change message changed to pending moderation -->
+	<div class="king-pending"><?php esc_html_e( 'This post is pending moderation.', 'king' ); ?></div>
 <?php endif; ?>

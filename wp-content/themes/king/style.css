@@ -1058,9 +1058,9 @@ embed,object{
     color:#a8b6c0
 }
 .king-flag.flagged{
-    background-color:#00abba;
+    background-color:red;
     color:#fff;
-    border-color:#00abba;
+    border-color:red;
     font-weight:600
 }
 .king-flag.flagged i{
@@ -1480,6 +1480,22 @@ div.king-repeater .acf-field-image,main.king-submit-video .acf-field-image{
     background-color:#00abba;
     color:#fff!important
 }
+.king-consent input{
+    display:none
+}
+.king-consent label{
+    background-color:#c8d1d8;;
+    color:#fff;
+    display:inline-block;
+    padding:6px 20px;
+    border-radius:32px;
+    font-size:13px;
+    cursor:pointer
+}
+.king-consent input:checked + label{
+    background-color:#00abba;
+    color:#fff!important
+}
 .form-categories{
     background-color:#eff2f5;
     padding:8px 12px;
@@ -1514,12 +1530,12 @@ div.king-repeater .acf-field-image,main.king-submit-video .acf-field-image{
     padding:0 10px!important;
     color:#b0bdc9;
     cursor:pointer;
-    background-color:#f8fafb;
+    background-color:#d9e1e5;
     border-radius:32px
 }
 .form-categories .form-categories-item .king-post-subcat{
-    margin-left:14px;
-    border-radius:8px 32px 32px
+    margin-left:24px;
+    border-radius:8px 32px 32px;
 }
 .form-categories-item input:checked + label{
     background-color:#00abba;
@@ -1668,6 +1684,26 @@ div.king-repeater .acf-field-image,main.king-submit-video .acf-field-image{
     font-size:12px;
     color:#BDC2CC;
     font-style:italic
+}
+.info-block{
+    display:block;
+    margin:4px 0 10px;
+    padding: 8px 12px;
+    font-size:14px;
+    border-radius: 10px;
+    color:#00abba;
+    background-color:#f6f7f9;
+    font-style:italic
+}
+.upload-info-block{
+    display:block;
+    margin:4px 0 10px;
+    padding: 8px 12px;
+    font-size:18px;
+    border-radius: 10px;
+    color:#f6f7f9;
+    background-color:#00abba;
+    font-style:bold;
 }
 .site-branding{
     padding-right:10px;
@@ -6152,12 +6188,11 @@ article.format-link .link-sponsored{
     width:auto
 }
 .king-delete-post{
-    background-color:#b5b6b9;
+    background-color:red;
+    border:solid 1px #8f0606;
     display:block;
     text-align:center;
-    border-radius:32px;
     color:#fff;
-    font-size:14px
 }
 .page-top-header.badges{
     background-color:#8cd8c5

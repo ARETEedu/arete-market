@@ -660,16 +660,19 @@ if ( king_plugin_active( 'ACF' ) ) :
 			} else {
 				$flag = get_comment_meta( $post_id, 'king_flags' );
 			}
-			$ftitle = __( 'Flag', 'king' );
+			$ftitle = __( 'Flag Content As Inappropriate', 'king' );
 			if ( is_array( $flag['0'] ) && is_super_admin() ) {
 				$flaged = ' flagged';
 				$fdism  = '1';
 				$ftitle = __( 'Dismiss Flags', 'king' );
-			} elseif ( is_array( $flag['0'] ) && in_array( $user_id, $flag['0'] ) ) {
+			} 
+			//KB changes: don't let users unflag their content
+			elseif ( is_array( $flag['0'] ) && in_array( $user_id, $flag['0'] ) ) {
 				$flaged = ' flagged';
-				$ftitle = __( 'Unflag', 'king' );
+				$ftitle = __( 'Content Flagged as Inappropriate', 'king' );
 				$fdism  = '0';
-			} else {
+			}
+			else {
 				$flaged = '';
 				$fdism  = '0';
 			}
@@ -697,7 +700,14 @@ if ( king_plugin_active( 'ACF' ) ) :
 				die( '-1' );
 			} elseif ( empty( $post_id ) ) {
 				die( '-1' );
+			} 
+			else if ($user_id == get_the_author_id( $post_id )
+				&& !is_super_admin()) {
+					//KB changes: don't let a user flag or unflag their own post
+					// unless super admin
+					die( '-1' );
 			}
+			
 			if ( 'p' === $ptype ) {
 				$like = get_post_meta( $post_id, 'king_flags' );
 			} else {
@@ -780,13 +790,18 @@ if ( king_plugin_active( 'ACF' ) ) :
 				if ( $flags ) {
 					foreach ( $flags as $flag ) {
 						$gflag = get_post_meta( $flag->ID, 'king_flags' );
-						$ftext .= '<li><i class="far fa-flag"></i>' . king_who_flagged( $gflag ) . '' . esc_html__( ' flagged post  ', 'king' ) . ' <a href="' . get_permalink( $flag->ID ) . '" >' . esc_attr( get_the_title( $flag->ID ) ) . '</a></li>';
+						//KB change. Don't show who flagged it as inappropriate
+						//$ftext .= '<li><i class="far fa-flag"></i>' . king_who_flagged( $gflag ) . '' . esc_html__( ' flagged post  ', 'king' ) . ' <a href="' . get_permalink( $flag->ID ) . '" >' . esc_attr( get_the_title( $flag->ID ) ) . '</a></li>';
+						$ftext .= '<li><i class="far fa-flag"></i>' . esc_html__( 'Your post  ', 'king' ) . ' <a href="' . get_permalink( $flag->ID ) . '" >' . esc_attr( get_the_title( $flag->ID ) ) . '</a> has been flagged as inappropriate. <a href="https://arete.market/content-moderation-policy/" >What does this mean?</a></li>';
+					
 					}
 				}
 				if ( $fcomments ) {
 					foreach ( $fcomments as $fcomment ) {
+						//KB change. Don't show who flagged it as inappropriate
 						$gflag = get_comment_meta( $fcomment->comment_ID, 'king_flags' );
-						$ftext .= '<li><i class="far fa-flag"></i>' . king_who_flagged( $gflag ) . '' . esc_html__( 'flagged comment ', 'king' ) . ' <a href="' . get_comment_link( $fcomment->comment_ID ) . '" >' . esc_html__( 'comment#', 'king' ) . esc_attr( $fcomment->comment_ID ) . '</a></li>';
+						//$ftext .= '<li><i class="far fa-flag"></i>' . king_who_flagged( $gflag ) . '' . esc_html__( 'flagged comment ', 'king' ) . ' <a href="' . get_comment_link( $fcomment->comment_ID ) . '" >' . esc_html__( 'comment#', 'king' ) . esc_attr( $fcomment->comment_ID ) . '</a></li>';
+						$ftext .= '<li><i class="far fa-flag"></i>' . esc_html__( 'flagged comment ', 'king' ) . ' <a href="' . get_comment_link( $fcomment->comment_ID ) . '" >' . esc_html__( 'comment#', 'king' ) . esc_attr( $fcomment->comment_ID ) . '</a></li>';
 					}
 				}
 			} else {

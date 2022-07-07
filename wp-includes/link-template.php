@@ -1465,7 +1465,10 @@ function get_edit_post_link( $id = 0, $context = 'display' ) {
 	}
 
 	if ( $post_type_object->_edit_link ) {
-		$link = admin_url( sprintf( $post_type_object->_edit_link . $action, $post->ID ) );
+		//KB change: use front end editor
+		//$link = admin_url( sprintf( $post_type_object->_edit_link . $action, $post->ID ) );
+		$link = esc_url( add_query_arg( 'post', $id, home_url( $GLOBALS['king_updte'] . '/' ) ) ); 
+
 	} else {
 		$link = '';
 	}
@@ -1485,7 +1488,6 @@ function get_edit_post_link( $id = 0, $context = 'display' ) {
 
 /**
  * Displays the edit post link for post.
- *
  * @since 1.0.0
  * @since 4.4.0 The `$class` argument was added.
  *
@@ -1523,7 +1525,6 @@ function edit_post_link( $text = null, $before = '', $after = '', $id = 0, $clas
 	 */
 	echo $before . apply_filters( 'edit_post_link', $link, $post->ID, $text ) . $after;
 }
-
 /**
  * Retrieves the delete posts link for post.
  *

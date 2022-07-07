@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<footer class="entry-footer">
 		<?php
-			edit_post_link(
+			king_edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post */
 					esc_html__( 'Edit %s', 'king' ),

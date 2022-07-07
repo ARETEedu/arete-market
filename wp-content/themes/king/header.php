@@ -29,6 +29,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php endif; ?>
 <?php wp_head(); ?>
+<?php //KB change
+	king_dublin_core_tags();
+?>
 </head>
 <body <?php body_class(); ?>>
 <?php

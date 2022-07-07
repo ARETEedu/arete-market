@@ -605,9 +605,51 @@ function king_meta_tags() {
 	<?php   } else { ?>
 		<meta name="description" content="<?php echo esc_attr( strip_tags( $description ) ); ?>">
 		<?php
+		
 	}
 }
 }
+/*
+ * KB Changes: add Dublin Core metadata 
+ * https://www.dublincore.org/
+ */
+function king_dublin_core_tags() {
+	
+	if ( !is_single() ) {
+		return;
+	}
+	global $post;
+	if ( have_posts() ) :
+		while ( have_posts() ) :
+			the_post();
+			$description = wp_strip_all_tags( substr( get_the_excerpt(), 0, 100 ) );
+		endwhile;
+		wp_reset_postdata();
+	endif;
+	$author_id = get_post_field( 'post_author', $post->ID );
+	$author_name = get_the_author_meta( 'display_name', $author_id );
+	$post_date = get_the_date( 'Y-m-d', $post->ID );
+	$post_categories = get_the_category( $post->ID );
+	$post_category_text = '';
+	foreach($post_categories as $cd) {
+		$cat_nm = $cd->cat_name;
+		$post_category_text = $cat_nm.' '.$post_category_text;
+	}
+	$post_category_text = rtrim($post_category_text);
+	?>
+
+<link rel=schema.dc href="http://purl.org/metadata/dublin_core">
+<meta name="DC:Title" content="<?php echo get_the_title( $post->ID ); ?>">
+<meta name="DC.Creator" content="<?php echo $author_name ?>">	
+<meta name="DC.Language" content="en">
+<meta name="DC.Type" content="ARLEM">
+<meta name="DC.Date" content="<?php echo $post_date ?>">
+<meta name="DC.Publisher" content="Arete">
+<meta name="DC.Subject" content="<?php echo $post_category_text ?>">
+	<?php
+
+}
+
 if ( class_exists( 'Acf' ) ) :
 	if ( get_field( 'enable_reactions', 'option' ) ) :
 		/**
