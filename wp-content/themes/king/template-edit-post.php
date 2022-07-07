@@ -298,7 +298,7 @@ $licence_name =  $licence[0];
 				<?php endif; ?>
 				<!-- SUBMIT/ DELETE /CANCEL-->
 				<?php if ( current_user_can( 'edit_post', $postid ) && get_field( 'allow_users_to_delete_their_posts', 'option' ) ) : ?>
-				<button class="king-submit-button king-delete-post" type="submit" value="delete" id="king-submitbutton" name="king-editpost" ><?php esc_html_e( 'Delete Post', 'king' ); ?></button>
+				<button class="king-submit-button king-delete-post" type="submit" value="delete" id="king-submitbutton" name="king-editpost" onclick="return confirm('Are you sure you want to delete this?')" ><?php esc_html_e( 'Delete Post', 'king' ); ?></button>
 				<?php endif; ?>
 				<button class="king-submit-button" type="submit" value="cancel" id="submit-loading2" name="king-editpost"><?php esc_html_e( 'Cancel', 'king' ); ?></button>
 					
