@@ -602,6 +602,7 @@ if ( post_type_supports( $post_type, 'editor' ) ) {
 				'wp_autoresize_on'        => $_wp_editor_expand,
 				'add_unload_trigger'      => false,
 				'wp_keep_scroll_position' => ! $is_IE,
+				'encoding'				  => 'xml',
 			),
 		)
 	);

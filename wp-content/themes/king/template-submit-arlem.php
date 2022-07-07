@@ -30,10 +30,7 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 	//Get the category and licence
 	$category = isset( $_POST['king_post_category'] ) ? $_POST['king_post_category'] : '';
 	$licence = isset( $_POST['king_post_licence'] ) ? $_POST['king_post_licence'] : '';
-	//Get licence name out of string
-	if (preg_match('/"([^"]+)"/', $licence, $m)) {
-		$licence = $m[1];
-	}
+	
 	//If the user has added a video via URL, get it 
 	if ( isset( $_POST['video_url'] ) ) {
 		$video_url = wp_unslash( $_POST['video_url'] ); 
@@ -326,10 +323,13 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 					<span class="form-label"><?php esc_html_e( 'Select Licence', 'king' ); ?></span>
 					<ul>
 					<?php 
+						$licence = isset( $_POST['king_post_licence'] ) ? $_POST['king_post_licence'] : '';
+						//Get licence name out of string
+						$licence_name =  $licence[0];
 						while( have_rows('licences', 'option') ) : the_row();
 							$lic = get_sub_field('licence_name');
 							$checked = '';
-							if ( $licence == $lic ) {
+							if ( $licence_name == $lic ) {
 								$checked = 'checked';
 							}
 							echo '<li class="form-licences-item"><input type="radio" id="king_post_licence-' . esc_attr( $lic ) . '" name="king_post_licence[]" value="' . esc_attr( $lic ) . '" '. esc_attr( $checked ) .' /><label for="king_post_licence-' . esc_attr( $lic ) . '">' . esc_attr( $lic ) . '</label></li>';	

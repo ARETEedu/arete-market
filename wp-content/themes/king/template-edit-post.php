@@ -167,6 +167,8 @@ $post_thumb_url = get_the_post_thumbnail_url( $postid, 'medium' );
 $post_author    = get_post_field( 'post_author', $postid );
 $current_user   = wp_get_current_user();
 $licence 		= get_post_meta( $postid, 'licence', true );
+//Get licence name out of string
+$licence_name =  $licence[0];
 
 ?>
 <header class="page-top-header">
@@ -265,10 +267,10 @@ $licence 		= get_post_meta( $postid, 'licence', true );
 						while( have_rows('licences', 'option') ) : the_row();
 							$lic = get_sub_field('licence_name');
 							$checked = '';
-							if ( $licence == $lic ) {
+							if ( $licence_name == $lic ) {
 								$checked = 'checked';
 							}
-							echo '<li class="form-licences-item"><input type="checkbox" id="king_post_licence-' . esc_attr( $lic ) . '" name="king_post_licence[]" value="' . esc_attr( $lic ) . '" '. esc_attr( $checked ) .' /><label for="king_post_licence-' . esc_attr( $lic ) . '">' . esc_attr( $lic ) . '</label></li>';	
+							echo '<li class="form-licences-item"><input type="radio" id="king_post_licence-' . esc_attr( $lic ) . '" name="king_post_licence[]" value="' . esc_attr( $lic ) . '" '. esc_attr( $checked ) .' /><label for="king_post_licence-' . esc_attr( $lic ) . '">' . esc_attr( $lic ) . '</label></li>';	
 						endwhile; 
 					?>
 					</ul>
