@@ -2145,7 +2145,7 @@ acf_add_local_field_group(array(
             array(
             'key' => 'field_5aaalicencesc',
             'label' => 'Licences',
-            'name' => 'licences',
+            'name' => 'licence',
             'type' => 'repeater',
             'instructions' => 'Add a new Licence.',
             'required' => 0,

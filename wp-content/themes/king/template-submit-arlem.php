@@ -3,6 +3,9 @@
  * Submit ARLEM Page.
  * KB 
  * @package King
+ * 
+ * SNAGS: arlem folder, category & thumbnail deselect on save/ submit when have error
+ * 
  */
 
 // Prevent direct script access.
@@ -30,6 +33,10 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 	//Get the category and licence
 	$category = isset( $_POST['king_post_category'] ) ? $_POST['king_post_category'] : '';
 	$licence = isset( $_POST['king_post_licence'] ) ? $_POST['king_post_licence'] : '';
+	
+	$pluginlog = plugin_dir_path(__FILE__).'debug.log';
+	//Set licence (is a repeater field, needs values from all)
+	$licence_name = $licence[0];
 	
 	//If the user has added a video via URL, get it 
 	if ( isset( $_POST['video_url'] ) ) {
@@ -155,8 +162,8 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 		update_post_meta( $post_id, '_arlem_upload', 'field_99f5335001eed' );
 
 		//Update the licence field
-		update_field( 'licence', $licence, $post_id );
-		update_post_meta( $post_id, '_licence', 'field_5aaalicencesc' );
+		update_field( 'licence_name', $licence_name, $post_id );
+		update_post_meta( $post_id, '_licence_name', 'field_5aaalicencenn' );
 
 		//$no_thumbnail : user hasn't uploaded, and there isn't one in the ARLEM folder
 		//If there is a video, get the thumbnail for it
@@ -186,6 +193,8 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 
 		//For some reason, have to set the thumbnail post save when it's from an arlem upload,
 		// or it wipes the _thumbnail_id field
+		// Turns out acf/save_post can undo some custom fields
+		// See https://support.advancedcustomfields.com/forums/topic/update_post_meta-not-working-with-acf/
 		if ($thumbnail_in_arlem) {
 			$thumb = apply_filters( 'set_arlem_thumbnail', $arlem_upload, $post_id );
 			update_post_meta( $post_id, '_thumbnail_id', 'field_58f5594a975cb' );

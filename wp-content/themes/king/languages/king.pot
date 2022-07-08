@@ -2205,7 +2205,7 @@ msgid "Share This Poll :"
 msgstr ""
 
 #: template-parts/post-templates/single-parts/single-boxes.php:72
-msgid "This post saved as draft, you can see and edit all saved post drafts"
+msgid "This post saved as a draft, you can see and edit all saved drafts"
 msgstr ""
 
 #: template-parts/post-templates/single-parts/single-boxes.php:72

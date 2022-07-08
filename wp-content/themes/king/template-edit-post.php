@@ -1,7 +1,8 @@
 <?php
 /**
- * Post Edit template
- *
+ * ARLEM Edit template
+ * KB
+ * 
  * Allow edits to:
  *  - Title
  *  - Content
@@ -9,11 +10,12 @@
  *  - Category
  *  - Thumbnail
  *  - Video
- *  - License
+ *  - Licence
  * Do not allow edits to
  *  - ARLEM folder
  *  - Consent to GDPR and T&Cs
  * @package king
+ * 
  */
 
 // Prevent direct script access.
@@ -25,8 +27,9 @@ global $king_submit_errors;
 $postid = $_GET["post"];
 $format = get_post_format( $postid );
 $status = get_post_status( $postid );
+$pluginlog = plugin_dir_path(__FILE__).'debug.log';
 
-if ( isset( $_POST['king_edit_post_upload_form_submitted'] ) && wp_verify_nonce( $_POST['king_edit_post_upload_form_submitted'], 'king_edit_post_upload_form' ) ) { // input var okay; sanitization okay.
+if ( isset( $_POST['king_edit_post_upload_form_submitted'] ) && wp_verify_nonce( $_POST['king_edit_post_upload_form_submitted'], 'king_edit_post_upload_form' ) ) {
 
 	if ( 'delete' === $_POST['king-editpost'] ) {
 		wp_delete_post( $postid );
@@ -37,28 +40,38 @@ if ( isset( $_POST['king_edit_post_upload_form_submitted'] ) && wp_verify_nonce(
 		wp_redirect( home_url() );
 		exit;
 	}
-
-	// Get clean input variables
-	$edit_title         = sanitize_text_field( $_POST['king_post_title'] );
-	$tags               = sanitize_text_field( $_POST['king_post_tags'] );
-	$edit_content       = stripslashes( $_POST['king_post_content'] );
-	$category           = isset( $_POST['king_post_category'] ) ? $_POST['king_post_category'] : '';
-	$licence 			= isset( $_POST['king_post_licence'] ) ? $_POST['king_post_licence'] : '';
-
+	
+	//Video uploads
 	$video_url    = '';
 	$video_upload = '';
 	$video_embed  = '';
+
+	//Get the title, tags, content and thumbnail from the post
+	$edit_title         = sanitize_text_field( $_POST['king_post_title'] );
+	$tags               = sanitize_text_field( $_POST['king_post_tags'] );
+	$edit_content       = stripslashes( $_POST['king_post_content'] );
+	$thumb   			= isset( $_POST['acf']['field_58f5594a975cb'] ) ? sanitize_text_field( $_POST['acf']['field_58f5594a975cb'] ) : get_post_thumbnail_id( $postid ) ;
+	//Get the category and licence
+	$category = isset( $_POST['king_post_category'] ) ? $_POST['king_post_category'] : '';
+	$edit_licence = isset( $_POST['king_post_licence'] ) ? $_POST['king_post_licence'][0] : '';
+	
+	//If the user has added a video via URL, get it 
 	if ( isset( $_POST['video_url'] ) ) {
-		$video_url = wp_unslash( $_POST['video_url'] ); // Input var okey.
+		$video_url = wp_unslash( $_POST['video_url'] ); 
 	}
+	//If the user has uploaded a video, get it 
 	if ( isset( $_POST['acf']['field_58f5335001eed'] ) ) {
 		$video_upload = esc_url( wp_unslash( $_POST['acf']['field_58f5335001eed'] ) ); // Input var okey.
 	}
+	//If the user has embedded a video, get it 
 	if ( isset( $_POST['acf']['field_59c9812458fe6'] ) ) {
 		$video_embed = wp_unslash( $_POST['acf']['field_59c9812458fe6'] ); // Input var okey.
 	}
-
+	
+	/**Validation**/
+	//Keep track of any errors
 	$king_submit_errors = array();
+	
 	//Title must not be too long
 	if ( get_field( 'maximum_title_length', 'option' ) ) {
 		$title_length = get_field( 'maximum_title_length', 'option' );
@@ -90,25 +103,35 @@ if ( isset( $_POST['king_edit_post_upload_form_submitted'] ) && wp_verify_nonce(
 		$king_submit_errors['image_empty'] = esc_html__( 'Either a thumbnail or video is required.', 'king' );
 	}		
 	//Licence must be selected
-	if ( trim( $licence ) === '' ) {
+	if ( trim( $edit_licence ) === '' ) {
 		$king_submit_errors['licence_empty'] = esc_html__( 'You must select a licence.', 'king' );
 	}
 	
+	//If there are no errors, set the post status
 	if ( empty( $king_submit_errors ) ) {
-
-		if ( is_super_admin() ) {
-			$poststatus = 'publish';
-		} elseif ( get_field( 'moderate_posts_edit', 'option' ) ) {
-			$poststatus = 'pending';
-		} elseif ( 'save' === $_POST['king-editpost'] ) {
-			$poststatus = $status;
-		} elseif ( 'publish' === $_POST['king-editpost'] ) {
-			$poststatus = 'publish';
+		switch ( $_POST['king-editpost'] ) {
+			case 'publish':
+				if ( is_super_admin() ) {
+					$poststatus = 'publish';
+				} elseif ( get_field( 'verified_posts', 'option' ) === true && get_field( 'verified_account', 'user_' . get_current_user_id() ) ) {
+					$poststatus = 'publish';
+				} elseif ( get_field( 'disable_post_moderation', 'option' ) ) {
+					$poststatus = 'publish';
+				} elseif ( get_field( 'enable_user_groups', 'options' ) && king_groups_permissions( 'groups_create_posts_without_approval' ) && get_field( 'groups_create_posts_without_approval', 'options' ) ) {
+					$poststatus = 'publish';
+				} else {
+					$poststatus = 'pending';
+				}
+				break;
+			case 'save':
+				$poststatus = $status;
+				break;
 		}
 		
+		//Update the post
 		$post_information = array(
 			'ID'            => $postid,
-			'post_title'    =>  wp_strip_all_tags( $edit_title ),
+			'post_title'    => wp_strip_all_tags( $edit_title ),
 			'post_content'  => $edit_content,
 			'tags_input'    => $tags,
 			'post_category' => $category,
@@ -140,12 +163,12 @@ if ( isset( $_POST['king_edit_post_upload_form_submitted'] ) && wp_verify_nonce(
 				set_post_thumbnail( $post_id, $attach_id );
 			}
 		} 
+		update_field( 'licence_name', $edit_licence, $post_id );
 		
-		//Update the licence field
-		update_field( 'licence', $licence, $post_id );
-		update_post_meta( $post_id, '_licence', 'field_5aaalicencesc' );
-
-		do_action( 'acf/save_post' , $postid );
+		do_action( 'acf/save_post' , $post_id );
+		
+		$licence_post_update = get_post_meta( $post_id, 'licence', true );
+		
 		if ( $post_id ) {
 			$permalink = get_permalink( $post_id );
 			wp_redirect( $permalink );
@@ -166,11 +189,10 @@ $post_thumb     = get_post_thumbnail_id( $postid );
 $post_thumb_url = get_the_post_thumbnail_url( $postid, 'medium' );
 $post_author    = get_post_field( 'post_author', $postid );
 $current_user   = wp_get_current_user();
-$licence 		= get_post_meta( $postid, 'licence', true );
-//Get licence name out of string
-$licence_name =  $licence[0];
+$licence_name   = get_post_meta( $postid, 'licence_name', true );
 
 ?>
+
 <header class="page-top-header">
 	<h1 class="page-title"><?php echo esc_html_e( 'Edit '.$title, 'king' ); ?></h1>
 </header><!-- .page-header -->
@@ -281,9 +303,6 @@ $licence_name =  $licence[0];
 					<label for="king_post_content"><?php esc_html_e( 'Content', 'king' ); ?></label>
 					<div class="tinymce" id="king_post_content"><?php echo( wp_kses_post( html_entity_decode( $content ) ) ); ?></div>
 				</div>
-				<?php if ( isset( $king_submit_errors['content_empty'] ) ) : ?>
-					<div class="king-error"><?php echo esc_attr( $king_submit_errors['content_empty'] ); ?></div>
-				<?php endif; ?>			
 						
 				<div class="king-form-group">
 					<label for="king_post_tags"><?php esc_html_e( 'Tags', 'king' ); ?></label>

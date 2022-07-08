@@ -32,12 +32,10 @@ global $post;
 	<div class="licence-info">
 		<h4>Licence</h4>
 	<?php 
-		$licence = get_post_meta( $postid, 'licence', true );
+		$licence_name = get_post_meta( $postid, 'licence_name', true );
 		//Default URL
 		$licence_url = 'https://creativecommons.org/about/cclicenses/';
 		$licence_sn = '';
-		//Default name
-		$licence_name =  $licence[0];
 		
 		while( have_rows('licences', 'option') ) : the_row();
 			$lic = get_sub_field('licence_name');
@@ -46,9 +44,13 @@ global $post;
 				$licence_sn = get_sub_field('licence_short_name');
 			}
 		endwhile;
-		echo '<p><i>Licenced under <a href="'.$licence_url.'">'.$licence_name.' ('.$licence_sn.')</a></i></p>';
-		echo '<span class="screen-reader-text">Licenced under '.$licence_name.' ('.$licence_sn.')</span>';
-		
+		if (empty( $licence_name )) {
+			echo '<p><i>A licence has not been set</i></p>';
+			echo '<span class="screen-reader-text">A licence has not been set</span>';
+		} else {
+			echo '<p><i>Licenced under <a href="'.$licence_url.'">'.$licence_name.' ('.$licence_sn.')</a></i></p>';
+			echo '<span class="screen-reader-text">Licenced under '.$licence_name.' ('.$licence_sn.')</span>';
+		}
 	?>
 	</div>
 </div>	

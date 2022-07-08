@@ -69,5 +69,5 @@ if ( $ad_below ) :
 	<?php endif; ?> 
 	<?php get_template_part( 'template-parts/post-templates/single-parts/authorbox' ); ?>
 	<?php if ( get_post_status( $post->ID ) === 'draft' ) : ?>
-		<div class="king-pending"><?php esc_html_e( 'This post saved as draft, you can see and edit all saved post drafts', 'king' ); ?><a href="<?php echo esc_url( site_url() . '/' . $GLOBALS['king_account'] . '/' . '?orderby=draft' ); ?>"><?php esc_html_e( ' HERE.', 'king' ); ?></a></div>
+		<div class="king-pending"><?php esc_html_e( 'This post saved as a draft, you can see and edit all saved drafts', 'king' ); ?><a href="<?php echo esc_url( site_url() . '/' . $GLOBALS['king_account'] . '/' . '?orderby=draft' ); ?>"><?php esc_html_e( ' HERE.', 'king' ); ?></a></div>
 	<?php endif; ?>
