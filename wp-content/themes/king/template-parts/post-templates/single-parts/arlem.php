@@ -44,7 +44,7 @@ global $post;
 				$licence_sn = get_sub_field('licence_short_name');
 			}
 		endwhile;
-		if (empty( $licence_name )) {
+		if (empty( $licence_name ) || ! $licence_name) {
 			echo '<p><i>A licence has not been set</i></p>';
 			echo '<span class="screen-reader-text">A licence has not been set</span>';
 		} else {

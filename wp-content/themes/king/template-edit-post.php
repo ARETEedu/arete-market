@@ -264,7 +264,7 @@ $licence_name   = get_post_meta( $postid, 'licence_name', true );
 					<ul>
 						<?php
 						foreach ( $categories as $cat ) {
-							if ( $format === 'arlem' ) { //KB CHANEGS
+							if ( $format === 'arlem' ) {
 								$catsfor = get_field( 'category_for', $cat );
 								if ( $catsfor && in_array( 'for_arlem', $catsfor, true ) || ! $catsfor ) :
 									$checked = '';
