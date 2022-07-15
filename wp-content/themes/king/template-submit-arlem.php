@@ -442,9 +442,8 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 				if ( isset( $_POST['acf']['field_58f5594a975cb'] )) {
 					$post_thumb = $_POST['acf']['field_58f5594a975cb'];
 					$post_thumb_url = wp_get_attachment_url( $_POST['acf']['field_58f5594a975cb'] );
-				}
-				?>
-				<div class="acf-field acf-field-image acf-field-58f5594a975cb" style="width: 100%; min-height: 210px;" data-name="_thumbnail_id" data-type="image" data-key="field_58f5594a975cb" data-width="50">
+					?>
+					<div class="acf-field acf-field-image acf-field-58f5594a975cb" style="width: 100%; min-height: 210px;" data-name="_thumbnail_id" data-type="image" data-key="field_58f5594a975cb" data-width="50">
 					<div class="acf-input">
 						<div class="acf-image-uploader acf-cf has-value" data-preview_size="medium" data-library="uploadedTo" data-mime_types="jpg, png, gif, jpeg" data-uploader="wp">
 							<input name="acf[field_58f5594a975cb]" value="<?php echo esc_attr( $post_thumb ); ?>" type="hidden">	<div class="view show-if-value acf-soh" style="width: 100%;">
@@ -459,6 +458,29 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 						</div>
 					</div>
 				</div>
+				<?php
+				} else {
+					?>
+					<div class="acf-field acf-field-image acf-field-58f5594a975cb" data-name="_thumbnail_id" data-type="image" data-key="field_58f5594a975cb">
+					<div class="acf-input">
+						<div class="acf-image-uploader" data-preview_size="medium" data-library="uploadedTo" data-mime_types="jpg, png, gif, jpeg, webp" data-uploader="wp">
+							<input type="hidden" name="acf[field_58f5594a975cb]" value="" required="required">
+							<div class="show-if-value image-wrap" style="width: 100%;">
+								<img src="" alt="" data-name="image" style="width: 100%;border-radius: 10px;">
+									<div class="acf-actions -hover">
+										<a class="acf-icon -pencil dark" data-name="edit" href="#" title="Edit"></a>
+										<a class="acf-icon -cancel dark" data-name="remove" href="#" title="Remove"></a>
+									</div>
+							</div>
+						<div class="hide-if-value inputprev-span">
+							<a data-name="add" class="acf-button button featured-image-upload" href="#"><?php esc_html_e( 'Select thumbnail', 'king' ); ?></a>
+						</div>
+						</div>
+					</div>
+				</div>
+					<?php
+				}
+				?>
 				
 				<!-- Upload Video (optional, also can be disabled) -->
 				<label for="king_post_content"><?php esc_html_e( 'Video', 'king' ); ?></label>
