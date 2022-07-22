@@ -1082,7 +1082,6 @@ function king_get_edit_post_link( $id = 0, $context = 'display' ) {
 	if ( $post_type_object->_edit_link ) {
 		//KB change: use front end editor
 		$link = esc_url( add_query_arg( 'post', $id, home_url( $GLOBALS['king_updte'] . '/' ) ) ); 
-
 	} else {
 		$link = '';
 	}
@@ -1117,7 +1116,14 @@ function king_edit_post_link( $text = null, $before = '', $after = '', $id = 0, 
 		return;
 	}
 
-	$url = king_get_edit_post_link( $post->ID );
+	$url = "";
+	$post_type = get_post_type( $id );
+	if ( $post_type == "arlem") {
+		$url = king_get_edit_post_link( $id );
+	} else {
+		$url = edit_post_link($text, $before, $after, $id, $class);
+	}
+
 	if ( ! $url ) {
 		return;
 	}

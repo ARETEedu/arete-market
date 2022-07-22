@@ -1465,10 +1465,7 @@ function get_edit_post_link( $id = 0, $context = 'display' ) {
 	}
 
 	if ( $post_type_object->_edit_link ) {
-		//KB change: use front end editor
-		//$link = admin_url( sprintf( $post_type_object->_edit_link . $action, $post->ID ) );
-		$link = esc_url( add_query_arg( 'post', $id, home_url( $GLOBALS['king_updte'] . '/' ) ) ); 
-
+		$link = admin_url( sprintf( $post_type_object->_edit_link . $action, $post->ID ) );
 	} else {
 		$link = '';
 	}
