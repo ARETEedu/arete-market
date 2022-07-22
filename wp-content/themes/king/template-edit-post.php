@@ -213,6 +213,7 @@ $licence_name   = get_post_meta( $postid, 'licence_name', true );
 	<main id="main" class="page-news-main king-post-edit">
 		<form id="king_posts_form" action="" method="POST" enctype="multipart/form-data">
 			<div class="submit-news-left">
+				<span class="upload-info-block">Please note, you cannot change the ARLEM file associated with a post. Please delete the existing post, and create a new one to make any changes.</span>
 				<!--ERRORS -->
 				<!-- Check there is a title -->
 				<?php if ( isset( $king_submit_errors['title_empty'] ) ) : ?>
