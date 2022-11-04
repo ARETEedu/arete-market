@@ -51,7 +51,7 @@ function verify_file($file_id) {
 
         $zip->close();
     } else {
-        error_log( "Could not unzip the folder. Error code: ".$zip.PHP_EOL, 3, $pluginlog);
+        error_log( "Could not unzip the folder. Error code: ".$res.PHP_EOL, 3, $pluginlog);
     }
     return $error;
 }
