@@ -11,6 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <div id="primary" class="content-area">
+	<h2>TEST</h2>
 	<main id="main" class="site-main post-page single-post sing-template-1">
 		<?php if ( get_field( 'ads_above_content', 'option' ) ) : ?>
 			<div class="ads-postpage"><?php $ad_above = get_field( 'ads_above_content','options' ); echo do_shortcode( $ad_above ); ?></div>

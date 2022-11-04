@@ -605,9 +605,51 @@ function king_meta_tags() {
 	<?php   } else { ?>
 		<meta name="description" content="<?php echo esc_attr( strip_tags( $description ) ); ?>">
 		<?php
+		
 	}
 }
 }
+/*
+ * KB Changes: add Dublin Core metadata 
+ * https://www.dublincore.org/
+ */
+function king_dublin_core_tags() {
+	
+	if ( !is_single() ) {
+		return;
+	}
+	global $post;
+	if ( have_posts() ) :
+		while ( have_posts() ) :
+			the_post();
+			$description = wp_strip_all_tags( substr( get_the_excerpt(), 0, 100 ) );
+		endwhile;
+		wp_reset_postdata();
+	endif;
+	$author_id = get_post_field( 'post_author', $post->ID );
+	$author_name = get_the_author_meta( 'display_name', $author_id );
+	$post_date = get_the_date( 'Y-m-d', $post->ID );
+	$post_categories = get_the_category( $post->ID );
+	$post_category_text = '';
+	foreach($post_categories as $cd) {
+		$cat_nm = $cd->cat_name;
+		$post_category_text = $cat_nm.' '.$post_category_text;
+	}
+	$post_category_text = rtrim($post_category_text);
+	?>
+
+<link rel=schema.dc href="http://purl.org/metadata/dublin_core">
+<meta name="DC:Title" content="<?php echo get_the_title( $post->ID ); ?>">
+<meta name="DC.Creator" content="<?php echo $author_name ?>">	
+<meta name="DC.Language" content="en">
+<meta name="DC.Type" content="ARLEM">
+<meta name="DC.Date" content="<?php echo $post_date ?>">
+<meta name="DC.Publisher" content="Arete">
+<meta name="DC.Subject" content="<?php echo $post_category_text ?>">
+	<?php
+
+}
+
 if ( class_exists( 'Acf' ) ) :
 	if ( get_field( 'enable_reactions', 'option' ) ) :
 		/**
@@ -1085,13 +1127,16 @@ if ( king_plugin_active( 'ACF' ) ) :
 						$notify_text .= '<li>' . $seen . '<div class="king-notify-avatar"><span class="king-notify-avatar-img">' . $user_avatar . '</span><i class="fas fa-thumbs-up fa-xs"></i></div><a href="' . esc_url( $user_url ) . '" >' . esc_attr( $user_info->user_login ) . ' </a>' . esc_html__( 'liked your post', 'king' ) . ' <a href="' . get_permalink( $comment['postid'] ) . '" >' . esc_attr( get_the_title( $comment['postid'] ) ) . '</a></li>';
 					} elseif ( 'dislike' === $comment['type'] ) {
 						$notify_text .= '<li>' . $seen . '<div class="king-notify-avatar"><span class="king-notify-avatar-img">' . $user_avatar . '</span><i class="fas fa-thumbs-down fa-xs"></i></div><a href="' . esc_url( $user_url ) . '" >' . esc_attr( $user_info->user_login ) . ' </a>' . esc_html__( 'disliked your post', 'king' ) . ' <a href="' . get_permalink( $comment['postid'] ) . '" >' . esc_attr( get_the_title( $comment['postid'] ) ) . '</a></li>';
+					} elseif ( 'completeProfile' === $comment['type'] ) {
+						//KB CHANGES
+						$notify_text .= '<li>' . $seen . '<div class="king-notify-avatar"><span class="king-notify-avatar-img">' . $user_avatar . '</span><i class="fas fa-pen fa-xs"></i></div><a href="' . esc_url( $user_url ) . '" >' . esc_attr( $user_info->user_login ) . ' </a>' . esc_html__( 'Please complete your profile', 'king' ) . ' <a href="'. $url = get_option( 'siteurl' ) . '/profile/settings/" >' . esc_attr( get_the_title( $comment['postid'] ) ) . '</a></li>';
 					}
 				}
 				$notify_text .= '<li class="king-clean-center"><input type="button" class="king-clean" value="&#xf1b8;" title="' . esc_html__( 'Clear All', 'king' ) . '" /></li>';
 				delete_user_meta( $user_id, 'king_notify_count' );
 
 			} else {
-				$notify_text .= '<li class="king-clean-center"><i class="fas fa-fish"></i><br>' . esc_html__( 'Nothing new right now !', 'king' ) . '</li>';
+				$notify_text .= '<li class="king-clean-center"><i class="fas fa-battery-empty"></i><br>' . esc_html__( 'Nothing new right now !', 'king' ) . '</li>';
 			}
 			echo $notify_text;
 			die();
@@ -1105,7 +1150,7 @@ if ( king_plugin_active( 'ACF' ) ) :
 		function king_clean_notify() {
 			$user_id = get_current_user_id();
 			delete_user_meta( $user_id, 'king_notify' );
-			$notify_text = '<li class="king-clean-center"><i class="fas fa-fish"></i><br>' . esc_html__( 'Nothing new right now !', 'king' ) . '</li>';
+			$notify_text = '<li class="king-clean-center"><i class="fas fa-battery-empty"></i><br>' . esc_html__( 'Nothing new right now !', 'king' ) . '</li>';
 			echo $notify_text;
 			die();
 		}

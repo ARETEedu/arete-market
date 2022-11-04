@@ -89,7 +89,15 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 			'capability'  => 'manage_options',
 		)
 	);
-
+	// KB: Licences.
+	acf_add_options_sub_page(
+		array(
+			'page_title'  => esc_html__( 'King Licences', 'king' ),
+			'menu_title'  => 'Licences',
+			'parent_slug' => $parent['menu_slug'],
+			'capability'  => 'manage_options',
+		)
+	);
 
 }
 
@@ -716,6 +724,20 @@ function king_disallow_personal_uploads( $existing_mimes = array() ) {
 add_filter( 'upload_mimes', 'king_disallow_personal_uploads' );
 
 /**
+ * KB: allow additional mime types
+ *
+ * @param [type] $existing_mimes existing mimes.
+ * @return array
+ */
+function add_custom_upload_mimes( $existing_mimes ){
+	$existing_mimes['zip']  = 'application/zip';
+	$existing_mimes['json']  = 'application/json';
+	$existing_mimes['gzip']  = 'application/gzip';
+	return $existing_mimes;
+}
+add_filter('upload_mimes', 'add_custom_upload_mimes');
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/includes/customizer-head.php';
@@ -756,7 +778,7 @@ global $king_followers;
 global $king_following;
 global $king_dashboard;
 global $king_prvtmsg;
-global $king_updte;
+global $king_updte; 
 global $hide;
 
 /**
@@ -795,7 +817,7 @@ function king_init_globals() {
 	$king_sarlem	= 'submit-arlem'; //KB CHANGE
 	$king_dashboard = 'dashboard';
 	$king_prvtmsg   = 'prvtmsg';
-	$king_updte     = 'updte';
+	$king_updte     = 'updte'; 
 }
 add_action( 'init', 'king_init_globals' );
 /*Custom Rewrite Rules*/
@@ -927,6 +949,7 @@ function king_template_redirects() {
 		get_template_part( 'template', 'submit-arlem' );
 		exit();
 	endif;
+	//END KB CHANGE
 	if ( $wp_query->get( 'bpsettings' ) ) :
 		get_template_part( 'user', 'settings' );
 		exit();
@@ -1005,3 +1028,120 @@ if ( function_exists( 'instant_articles_init' ) ) {
 	require_once KING_INCLUDES_PATH . 'plugins/facebook-instant-articles.php';
 }
 
+/*
+ *
+ * KB CHANGE
+ * Add notification if user hasn't completed thier profile
+ * post id is hardcoded to match page id of user settings in database
+ */
+function user_profile_incomplete($user_id) {
+	king_create_notify( 6, 'completeProfile' );		
+}
+
+add_action( 'user_register', 'user_profile_incomplete', 10, 1 );
+
+/**
+ *
+ * KB: modified from core WP link-template, so uses FE editor
+ * 
+ * Retrieves the edit post link for post.
+ *
+ * Can be used within the WordPress loop or outside of it. Can be used with
+ * pages, posts, attachments, and revisions.
+ *
+ * @since 2.3.0
+ *
+ * @param int|WP_Post $id      Optional. Post ID or post object. Default is the global `$post`.
+ * @param string      $context Optional. How to output the '&' character. Default '&amp;'.
+ * @return string|null The edit post link for the given post. Null if the post type does not exist
+ *                     or does not allow an editing UI.
+ */
+function king_get_edit_post_link( $id = 0, $context = 'display' ) {
+	$post = get_post( $id );
+	if ( ! $post ) {
+		return;
+	}
+
+	if ( 'revision' === $post->post_type ) {
+		$action = '';
+	} elseif ( 'display' === $context ) {
+		$action = '&amp;action=edit';
+	} else {
+		$action = '&action=edit';
+	}
+
+	$post_type_object = get_post_type_object( $post->post_type );
+	if ( ! $post_type_object ) {
+		return;
+	}
+
+	if ( ! current_user_can( 'edit_post', $post->ID ) ) {
+		return;
+	}
+
+	if ( $post_type_object->_edit_link ) {
+		//KB change: use front end editor
+		$link = esc_url( add_query_arg( 'post', $id, home_url( $GLOBALS['king_updte'] . '/' ) ) ); 
+	} else {
+		$link = '';
+	}
+
+	/**
+	 * Filters the post edit link.
+	 *
+	 * @since 2.3.0
+	 *
+	 * @param string $link    The edit link.
+	 * @param int    $post_id Post ID.
+	 * @param string $context The link context. If set to 'display' then ampersands
+	 *                        are encoded.
+	 */
+	return apply_filters( 'king_get_edit_post_link', $link, $post->ID, $context );
+}
+
+/**
+ * KB: Displays the edit post link for post.
+ * @since 1.0.0
+ * @since 4.4.0 The `$class` argument was added.
+ *
+ * @param string      $text   Optional. Anchor text. If null, default is 'Edit This'. Default null.
+ * @param string      $before Optional. Display before edit link. Default empty.
+ * @param string      $after  Optional. Display after edit link. Default empty.
+ * @param int|WP_Post $id     Optional. Post ID or post object. Default is the global `$post`.
+ * @param string      $class  Optional. Add custom class to link. Default 'post-edit-link'.
+ */
+function king_edit_post_link( $text = null, $before = '', $after = '', $id = 0, $class = 'post-edit-link' ) {
+	$post = get_post( $id );
+	if ( ! $post ) {
+		return;
+	}
+
+	$url = "";
+	$post_type = get_post_type( $id );
+	if ( $post_type == "arlem") {
+		$url = king_get_edit_post_link( $id );
+	} else {
+		$url = edit_post_link($text, $before, $after, $id, $class);
+	}
+
+	if ( ! $url ) {
+		return;
+	}
+
+	if ( null === $text ) {
+		$text = __( 'Edit This' );
+	}
+
+	$link = '<a class="' . esc_attr( $class ) . '" href="' . esc_url( $url ) . '">' . $text . '</a>';
+
+	/**
+	 * Filters the post edit link anchor tag.
+	 *
+	 * @since 2.3.0
+	 *
+	 * @param string $link    Anchor tag for the edit link.
+	 * @param int    $post_id Post ID.
+	 * @param string $text    Anchor text.
+	 */
+	echo $before . apply_filters( 'king_edit_post_link', $link, $post->ID, $text ) . $after;
+}

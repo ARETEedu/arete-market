@@ -13,6 +13,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
 ?>
 <?php if ( ( get_field( 'enable_flags_for_posts', 'options' ) || get_field( 'enable_flags_for_comments', 'options' ) ) && is_super_admin() ) : ?>
 <div class="king-notify">

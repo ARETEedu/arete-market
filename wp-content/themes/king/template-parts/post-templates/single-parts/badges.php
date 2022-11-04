@@ -28,7 +28,7 @@ if ( 'badges-2' === get_field( 'post_page_buttons_style', 'options' ) ) :
 		endif;
 		?>
 		<?php if ( ! is_user_logged_in() ) : ?>
-			<div class="king-alert-like"><?php esc_html_e( 'Please ', 'king' ); ?><a href="<?php echo esc_url( site_url() . '/' . $GLOBALS['king_login'] ); ?>"><?php esc_html_e( 'log in ', 'king' ); ?></a><?php esc_html_e( ' or ', 'king' ); ?><a href="<?php echo esc_url( site_url() . '/' . $GLOBALS['king_register'] ); ?>"><?php esc_html_e( ' register ', 'king' ); ?></a><?php esc_html_e( ' to do it. ', 'king' ); ?></div>
+			<div class="king-alert-like"><?php esc_html_e( 'Please ', 'king' ); ?><a href="<?php echo esc_url( site_url() . '/' . $GLOBALS['king_login'] ); ?>"><?php esc_html_e( 'log in ', 'king' ); ?></a><?php esc_html_e( ' or ', 'king' ); ?><a href="<?php echo esc_url( site_url() . '/' . $GLOBALS['king_register'] ); ?>"><?php esc_html_e( ' register ', 'king' ); ?></a><?php esc_html_e( ' to do this. ', 'king' ); ?></div>
 		<?php endif; ?>
 	</div><!-- .post-like -->
 	<div class="ft-right">

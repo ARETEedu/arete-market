@@ -40,6 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php endif; ?>
 				<?php get_template_part( 'template-parts/post-templates/single-parts/posttitle' ); ?>
 				<?php get_template_part( 'template-parts/post-templates/single-parts/badges' ); ?>
+				
 				<div class="entry-content">
 					<?php
 					the_content(sprintf(

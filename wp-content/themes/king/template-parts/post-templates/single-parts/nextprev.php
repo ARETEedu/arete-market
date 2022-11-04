@@ -29,14 +29,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 				if ( ( esc_attr( $post_author ) === esc_attr( $current_user->ID ) ) || is_super_admin() ) :
 					if ( ( get_field( 'verified_edit_posts', 'options' ) && get_field( 'verified_account', 'user_' . $current_user->ID ) || ! get_field( 'verified_edit_posts', 'options' ) ) || ( get_field( 'enable_user_groups', 'options' ) && king_groups_permissions( 'groups_edit_their_own_posts' ) )  ) :
 						?>
-						<a href="<?php echo esc_url( add_query_arg( 'term', get_the_ID(), home_url( $GLOBALS['king_updte'] . '/' ) ) ); ?>" class="king-fedit"><i class="fa fa-pencil" aria-hidden="true"></i><?php echo esc_html__( ' Edit', 'king' ); ?></a>
+						<!--KB change-->
+						<a href="<?php echo esc_url( add_query_arg( 'post', get_the_ID(), home_url( $GLOBALS[''] . '/' ) ) ); ?>" class="king-fedit"><i class="fa fa-pencil" aria-hidden="true"></i><?php echo esc_html__( ' Edit', 'king' ); ?></a>
 						<?php
 					endif;
 				endif;
 			endif;
 		endif;
-	if ( is_super_admin() ) :
-		edit_post_link(
+	//KB CHANGE: allow users to edit if it is their article
+	//if ( is_super_admin() ) : 
+		king_edit_post_link(
 			sprintf(
 				/* translators: %s: Name of current post */
 				esc_html__( 'Edit %s', 'king' ),
@@ -45,7 +47,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			'<span class="edit-link">',
 			'</span>'
 		);
-	endif;
+	//endif;
 	?>
 </footer><!-- .entry-footer -->
 <div class="post-nav">

@@ -47,7 +47,7 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 		$king_submit_errors['content_empty'] = esc_html__( 'Content is too long.', 'king' );
 	}
 
-if ( trim( $thumb ) === '' ) {
+	if ( trim( $thumb ) === '' ) {
 		$king_submit_errors['image_empty'] = esc_html__( 'Thumbnail is required.', 'king' );
 	}
 

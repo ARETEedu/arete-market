@@ -37,13 +37,6 @@ define( 'DB_CHARSET', 'utf8' );
 /** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 
-/** ENABLE DEBUGGING */
-@ini_set(‘display_errors’,0);
-define('WP_DEBUG', true);
-define('WP_DEBUG_DISPLAY', false);
-define('WP_DEBUG_LOG', true);
-define('SAVEQUERIES', true);
-
 /**
  * Authentication Unique Keys and Salts.
  *
@@ -53,14 +46,14 @@ define('SAVEQUERIES', true);
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'ERpiLUUjHmgSCuE8z5rJEqW6L9/j2pYvC3eISocitxTs7UMwUvJRshGv7UlJ0TB0gH/y1cxLY9pq0RORNMWSGw==');
-define('SECURE_AUTH_KEY',  'TcZwakt0GVEhvW5JjndBF94+tnhfeAoWLEwAgREHXt3S8DCRDCY4xfI4KZBjha0fkO/d/ZwTxD9Av9KH2TDe7g==');
-define('LOGGED_IN_KEY',    'W+V45Rk50LaIC5/4zSthaSJqP6gYiRth7+Q/Falp/J+qAq2GI+5/FRCfT8cr31o9pmlJYCOweld9nHabL9EAzg==');
-define('NONCE_KEY',        'hHWAAk6xpKza1QXbXZ7SZLVV9Zu+rqGsXbxQF+mdwnFkMx9bGTb225djH7ibA/gvXx5H2fj/NNnqiYbYGRwszg==');
-define('AUTH_SALT',        'lXhs4P3I9sxGREcEeaSCBfnGAh1MhVQp/M8ISAkphDFECyBEW6/hPGfkiFlcdRFXfQrEScSV1BvDhWrUs/2EWA==');
-define('SECURE_AUTH_SALT', '9SnAEJ4nxxZubnDxozbGxp58U1vju5v70iz3tn2ZbvdDdt98P6/rxxOLQBmh7UCz9cg+xPldDSnp2ySS6VGIAA==');
-define('LOGGED_IN_SALT',   'oQp1SCRaACXwOE5MBJx8iTziCGgHb5HGX98ESZJNZUpbsFXLwwC3Cj5bVi/ahdEz2ptf7mChWDv2AS/xRRctFQ==');
-define('NONCE_SALT',       'fh00Yxe49mHdjusJkuePQ4v2GkucnIPlPR+4iLdaxPgAf23TCWR0MjDCHVkU4rQ6EJ50i0ltHl8A0kUK0ocMxg==');
+define('AUTH_KEY',         'BB6NfspzWzPlCraK/NzTBZ4jQVYqa8jbetQ4+EzTJn36jzLeog15rlRme2eC056/Hym79/7yfgjKZV43AfyR2w==');
+define('SECURE_AUTH_KEY',  'RoE6MeY/Xjafh7aTB+pGozCh6CR4aL3aFDJ1ADkInx9AmIzhyQehUbYmjN3n0oTPcDbqM7CyWB63f0YFzu8JlQ==');
+define('LOGGED_IN_KEY',    'EzBJwgUkkmD/iGGJ2HknkbezB2ev9rGVTf49uqiqvKw3vQIg8+cv7SB8uHWbUmpxtJoaHfXvDjLXhrbWs3EW+Q==');
+define('NONCE_KEY',        'UlW6OiqwzaSLV4Vv3h4vjPBOqdaImC+4TOFNuI6Aug0mfuB8hyYU+bSuzrQOauT2J9fbEjsGougw3Vq6jn+yhg==');
+define('AUTH_SALT',        'b5Cdpzjug5warI0iVGO2yJ3u5mcm1cBUs3QspDqNnAepuWtnn2L3x/zA3ahrx2pMQFT/OK/4OWhBt8/FWeKYvA==');
+define('SECURE_AUTH_SALT', 'vRGVNTNh72ZAOtbJGd7bpMXi5PCXzhJKVScN3/A/lvRO8pYFRP2VVqQJVDiug8YOCDT7W6Ol3ofe006G6aDZeA==');
+define('LOGGED_IN_SALT',   'TnfdOVy6PTg/xkU7AIzxErBGTs29tyW8Xxhq5h4UUtUec51vdZD893jqUG5203+0qfqcfXUwvd0toN0wRvHRXg==');
+define('NONCE_SALT',       'kVexGkO9jWnKzbsp7QHtiHFykNPPW92GXtnmB/EsNV9L5okGxb1mCEq8Gvka+X9cJ2r7HtH/W0B2QT8YaAOlUA==');
 
 /**
  * WordPress Database Table prefix.
@@ -70,8 +63,17 @@ define('NONCE_SALT',       'fh00Yxe49mHdjusJkuePQ4v2GkucnIPlPR+4iLdaxPgAf23TCWR0
  */
 $table_prefix = 'wp_';
 
+/*
+// Enable WP_DEBUG mode
+define( 'WP_DEBUG', true );
 
+// Enable Debug logging to the /wp-content/debug.log file
+define( 'WP_DEBUG_LOG', true );
 
+// Disable display of errors and warnings
+define( 'WP_DEBUG_DISPLAY', false );
+@ini_set( 'display_errors', 0 );
+*/
 
 /* That's all, stop editing! Happy publishing. */
 
@@ -82,3 +84,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
+

@@ -34,10 +34,13 @@ if ( isset( $_POST['save-edit'] ) ) {
 	$email            = sanitize_email( $_POST['email-edit'] );
 	$password         = esc_attr( $_POST['password-edit'] );
 	$confirm_password = esc_attr( $_POST['confirm-pass'] );
+	$king_verified 	  = isset( $_POST['apply-verified'] ); //KB changes
+	//$pluginlog = plugin_dir_path(__FILE__).'debug.log';
+	//error_log("king_verified is ".$king_verified.PHP_EOL, 3, $pluginlog);
 
 	if ( ! empty( $password ) ) {
-		if ( ( strlen( $password ) < 6 ) || ( strlen( $password ) > 40 ) ) {
-			$king_submit_errors['user_pass'] = esc_html__( 'Sorry, password must be 6 characters or more.', 'king' );
+		if ( ( strlen( $password ) < 8 ) || ( strlen( $password ) > 40 ) ) {
+			$king_submit_errors['user_pass'] = esc_html__( 'Sorry, password must be 8 characters or more.', 'king' );
 		} elseif ( $password !== $confirm_password ) {
 			$king_submit_errors['confirm_pass'] = esc_html__( 'Password and repeat password fields must match.', 'king' );
 		} else {
@@ -84,6 +87,19 @@ if ( isset( $_POST['save-edit'] ) ) {
 	if ( isset( $king_customurl ) && ( strlen( $king_customurl ) < 140 ) ) {
 		update_user_meta( $this_user->ID, '_profile_add_url', 'field_5a132d05c424b' );
 		update_user_meta( $this_user->ID, 'profile_add_url', $king_customurl );
+	}
+
+	if ( isset( $king_verified ) && intval($king_verified) > 0 ) {
+		$king_about_ok = isset( $king_about ) && ( strlen( $king_about ) < 1000 ) ;
+		$king_name_ok  = isset( $king_firstname ) && ( strlen( $king_firstname ) < 140 ) && ! empty( $king_firstname );
+		$king_surname_ok = isset( $king_lastname ) && ( strlen( $king_lastname ) < 140 ) && ! empty( $king_lastname ) ;
+		
+		if ($king_about_ok && $king_name_ok && $king_surname_ok) {
+			update_user_meta( $this_user->ID, '_verified_account', 'field_587be6cb63209' );
+			update_user_meta( $this_user->ID, 'verified_account', $king_verified );
+		} else {
+			$king_submit_errors['apply_verified'] = esc_html__( 'You must complete your profile in order to be accepted as a verified user, with at least First and Last Name and About filled in.', 'king' );
+		} 
 	}
 
 	if ( $email ) { // input var okay; sanitization okay.
@@ -201,6 +217,19 @@ acf_form_head();
 		<label for="edit-about"><?php esc_attr_e( 'About', 'king' ); ?></label>
 		<textarea name="edit-about" id="edit-about" class="bptextarea" rows="4" cols="50" maxlength="1000"><?php the_author_meta( 'description', $this_user->ID ); ?></textarea>
 </div>
+
+<!--//KB changes-->
+<?php $verified = get_field( 'verified_account', 'user_' . $this_user->ID ); ?>
+<?php if (!isset( $verified ) || $verified == 0) { ?>
+	<div class="king-form-group">
+		<label for="apply-verified"><?php esc_attr_e( 'Verify Account (you must have completed your profile)', 'king' ); ?></label>
+		<input id="apply-verified" type="checkbox" name="apply-verified" value=apply-verified>
+	</div>
+	<?php if ( isset( $king_submit_errors['apply_verified'] ) ) { ?>
+		<div class="king-error"><?php echo esc_attr( $king_submit_errors['apply_verified'] ); ?></div>
+	<?php } ?>
+<?php } ?>
+	
 <p>
 		<input type="submit" id="king-submitbutton" class="king-submit-button" name="save-edit" value="Save">
 </p>

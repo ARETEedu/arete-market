@@ -110,7 +110,7 @@ endif;
 		<?php if ( get_option( 'users_can_register' ) ) : ?>
 			<a href="<?php echo esc_url( site_url() . '/' . $GLOBALS['king_register'] ); ?>" class="login-register"><i class="fas fa-globe-africa"></i></i><?php esc_html_e( ' Register ', 'king' ); ?></a>
 		<?php endif; ?>	
-			<a href="<?php echo esc_url( site_url() . '/' . $GLOBALS['king_reset'] ); ?>" class="login-reset"><i class="fas fa-fish"></i><?php esc_html_e( 'Forgot password ?', 'king' ); ?></a>
+			<a href="<?php echo esc_url( site_url() . '/' . $GLOBALS['king_reset'] ); ?>" class="login-reset"><i class="fas fa-door-closed"></i><?php esc_html_e( 'Forgot password ?', 'king' ); ?></a>
 		</div>	
 	<?php if ( get_field( 'enable_facebook_login', 'option' ) || get_field( 'enable_googleplus_login', 'option' ) ) : ?>
 		<div class="social-login">

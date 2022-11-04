@@ -14,6 +14,10 @@ if ( ! function_exists( 'king_posttypes' ) ) :
 	 * Post Types.
 	 */
 	function king_posttypes() {
+		/*
+		 * KB Changes: for simplicity, hide these post types from the admin menu
+		 */
+		/* 
 		register_post_type(
 			'list',
 			array(
@@ -46,23 +50,6 @@ if ( ! function_exists( 'king_posttypes' ) ) :
 				'menu_icon'     => 'dashicons-chart-bar',
 			)
 		);
-		//KB CHANGES
-		register_post_type(
-			'arlem',
-			array(
-				'labels'        => array(
-					'name'          => __( 'ARLEM' ),
-					'singular_name' => __( 'ARLEM' ),
-				),
-				'public'        => true,
-				'has_archive'   => true,
-				'rewrite'       => array( 'slug' => 'arlem' ),
-				'menu_position' => 5,
-				'supports'      => array( 'title', 'editor', 'comments', 'thumbnail' ),
-				'taxonomies'    => array( 'post_tag', 'category' ),
-				'menu_icon'     => 'dashicons-welcome-learn-more',
-			)
-		);
 		register_post_type(
 			'trivia',
 			array(
@@ -92,6 +79,23 @@ if ( ! function_exists( 'king_posttypes' ) ) :
 				'menu_position' => 5,
 				'supports'      => array( 'title', 'thumbnail' ),
 				'menu_icon'     => 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyMCAyMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjAgMjAiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0E3QUFBRCIgZD0iTTEwLDAuNWMtNS4zLDAtOS41LDQuMy05LjUsOS41czQuMyw5LjUsOS41LDkuNXM5LjUtNC4zLDkuNS05LjVTMTUuMywwLjUsMTAsMC41eiBNNS41LDE0LjFINC4yDQoJQzMuNSwxNC4xLDMsMTMuNiwzLDEzVjdjMC0wLjYsMC41LTEuMSwxLjEtMS4xaDEuM1YxNC4xeiBNMTMuMiwxMy45YzAsMC44LTAuNywxLjUtMS41LDEuNUg4LjNjLTAuOCwwLTEuNS0wLjctMS41LTEuNVY2LjENCgljMC0wLjgsMC43LTEuNSwxLjUtMS41aDMuNWMwLjgsMCwxLjUsMC43LDEuNSwxLjVWMTMuOXogTTE2LDE0LjFoLTEuM1Y1LjlIMTZjMC42LDAsMS4yLDAuNSwxLjIsMS4xVjEzDQoJQzE3LjEsMTMuNiwxNi42LDE0LjEsMTYsMTQuMXoiLz4NCjxsaW5lIGZpbGw9Im5vbmUiIHgxPSIxMyIgeTE9IjE2LjUiIHgyPSIxMyIgeTI9IjE1LjQiLz4NCjxsaW5lIGZpbGw9Im5vbmUiIHgxPSIxMyIgeTE9IjQuNiIgeDI9IjEzIiB5Mj0iMy4xIi8+DQo8L3N2Zz4NCg==',
+			)
+		);*/
+		//KB CHANGES
+		register_post_type(
+			'arlem',
+			array(
+				'labels'        => array(
+					'name'          => __( 'ARLEM' ),
+					'singular_name' => __( 'ARLEM' ),
+				),
+				'public'        => true,
+				'has_archive'   => true,
+				'rewrite'       => array( 'slug' => 'arlem' ),
+				'menu_position' => 5,
+				'supports'      => array( 'title', 'editor', 'comments', 'thumbnail' ),
+				'taxonomies'    => array( 'post_tag', 'category' ),
+				'menu_icon'     => 'dashicons-welcome-learn-more',
 			)
 		);
 	}
@@ -656,19 +660,23 @@ if ( king_plugin_active( 'ACF' ) ) :
 			} else {
 				$flag = get_comment_meta( $post_id, 'king_flags' );
 			}
-			$ftitle = __( 'Flag', 'king' );
+			$ftitle = __( 'Flag Content As Inappropriate', 'king' );
 			if ( is_array( $flag['0'] ) && is_super_admin() ) {
 				$flaged = ' flagged';
 				$fdism  = '1';
 				$ftitle = __( 'Dismiss Flags', 'king' );
-			} elseif ( is_array( $flag['0'] ) && in_array( $user_id, $flag['0'] ) ) {
-				$flaged = ' flagged';
-				$ftitle = __( 'Unflag', 'king' );
+			} 
+			//KB changes: only super admins can unflag content
+			elseif ( is_array( $flag['0'] ) ) {
+				$ftitle = __( 'Content Flagged as Inappropriate', 'king' );
 				$fdism  = '0';
-			} else {
+				return '<div class="king-flag noedit" title="' . esc_attr( $ftitle ) . '" data-ds="' . esc_attr( $fdism ) . '"><i class="far fa-flag"></i></div>';
+			}
+			else {
 				$flaged = '';
 				$fdism  = '0';
 			}
+
 			if ( is_user_logged_in() ) {
 				$output  = '<div class="king-flag' . esc_attr( $flaged ) . '" data-id="' . esc_attr( $post_id ) . '" data-type="' . esc_attr( $ptype ) . '" data-nonce="' . esc_attr( $nonce ) . '" data-toggle="tooltip" data-placement="bottom" title="' . esc_attr( $ftitle ) . '" data-ds="' . esc_attr( $fdism ) . '"><i class="far fa-flag"></i></div>';
 			} else {
@@ -693,7 +701,14 @@ if ( king_plugin_active( 'ACF' ) ) :
 				die( '-1' );
 			} elseif ( empty( $post_id ) ) {
 				die( '-1' );
+			} 
+			else if ($user_id == get_the_author_id( $post_id )
+				&& !is_super_admin()) {
+					//KB changes: don't let a user flag or unflag their own post
+					// unless super admin
+					die( '-1' );
 			}
+			
 			if ( 'p' === $ptype ) {
 				$like = get_post_meta( $post_id, 'king_flags' );
 			} else {
@@ -702,6 +717,7 @@ if ( king_plugin_active( 'ACF' ) ) :
 			$likess = $like[0];
 			$likes  = check_array( $user_id, $like );
 			$count  = get_option( 'king_flag_count' );
+			
 			if ( $fdis == 1 ) {
 				if ( 'p' === $ptype ) {
 					delete_post_meta( $post_id, 'king_flags' );
@@ -768,29 +784,62 @@ if ( king_plugin_active( 'ACF' ) ) :
 		 * Show flagged posts with ajax.
 		 */
 		function king_show_flag() {
-
-			$flags     = get_posts( array( 'meta_key' => 'king_flags', 'post_type' => king_post_types(), 'post_status'    => array( 'pending', 'publish' ), ) );
-			$fcomments = get_comments( array( 'meta_key' => 'king_flags' ) );
-			$ftext     = '';
-			if ( $flags || $fcomments ) {
-				if ( $flags ) {
-					foreach ( $flags as $flag ) {
-						$gflag = get_post_meta( $flag->ID, 'king_flags' );
-						$ftext .= '<li><i class="far fa-flag"></i>' . king_who_flagged( $gflag ) . '' . esc_html__( ' flagged post  ', 'king' ) . ' <a href="' . get_permalink( $flag->ID ) . '" >' . esc_attr( get_the_title( $flag->ID ) ) . '</a></li>';
+			//KB CHANGES NEEDED. 
+			// SHOW ADMINS ALL FLAGS.
+			// SHOW USERS THEIR FLAGGED POSTS.
+			if (is_super_admin()) {
+				$flags     = get_posts( array( 'meta_key' => 'king_flags', 'post_type' => king_post_types(), 'post_status'    => array( 'pending', 'publish' ), ) );
+				$fcomments = get_comments( array( 'meta_key' => 'king_flags' ) );
+				$ftext     = '';
+				if ( $flags || $fcomments ) {
+					if ( $flags ) {
+						foreach ( $flags as $flag ) {
+							$gflag = get_post_meta( $flag->ID, 'king_flags' );
+							//KB change. Don't show who flagged it as inappropriate
+							$ftext .= '<li><i class="far fa-flag"></i>' . king_who_flagged( $gflag ) . '' . esc_html__( ' flagged post  ', 'king' ) . ' <a href="' . get_permalink( $flag->ID ) . '" >' . esc_attr( get_the_title( $flag->ID ) ) . '</a> as inappropriate. This requires your attention.</li>';
+							//$ftext .= '<li><i class="far fa-flag"></i>' . esc_html__( 'Your post  ', 'king' ) . ' <a href="' . get_permalink( $flag->ID ) . '" >' . esc_attr( get_the_title( $flag->ID ) ) . '</a> has been flagged as inappropriate. <a href="https://arete.market/content-moderation-policy/" >What does this mean?</a></li>';
+						
+						}
 					}
-				}
-				if ( $fcomments ) {
-					foreach ( $fcomments as $fcomment ) {
-						$gflag = get_comment_meta( $fcomment->comment_ID, 'king_flags' );
-						$ftext .= '<li><i class="far fa-flag"></i>' . king_who_flagged( $gflag ) . '' . esc_html__( 'flagged comment ', 'king' ) . ' <a href="' . get_comment_link( $fcomment->comment_ID ) . '" >' . esc_html__( 'comment#', 'king' ) . esc_attr( $fcomment->comment_ID ) . '</a></li>';
+					if ( $fcomments ) {
+						foreach ( $fcomments as $fcomment ) {
+							$gflag = get_comment_meta( $fcomment->comment_ID, 'king_flags' );
+							$ftext .= '<li><i class="far fa-flag"></i>' . king_who_flagged( $gflag ) . '' . esc_html__( 'flagged comment ', 'king' ) . ' <a href="' . get_comment_link( $fcomment->comment_ID ) . '" >' . esc_html__( 'comment#', 'king' ) . esc_attr( $fcomment->comment_ID ) . '</a></li>';
+							//$ftext .= '<li><i class="far fa-flag"></i>' . esc_html__( 'flagged comment ', 'king' ) . ' <a href="' . get_comment_link( $fcomment->comment_ID ) . '" >' . esc_html__( 'comment#', 'king' ) . esc_attr( $fcomment->comment_ID ) . '</a></li>';
+						}
 					}
+				} else {
+					$ftext .= '<li class="king-clean-center"><i class="fas fa-battery-empty"></i><br>' . esc_html__( 'Nothing new right now !', 'king' ) . '</li>';
 				}
+				//delete_option( 'king_flag_count' ); //KB change. Only admins can remove flag.
+				echo $ftext;
+				die();
 			} else {
-				$ftext .= '<li class="king-clean-center"><i class="fas fa-fish"></i><br>' . esc_html__( 'Nothing new right now !', 'king' ) . '</li>';
+				$user_id = get_current_user_id();
+				$flags     = get_posts( array( 'author' => $user_id, 'meta_key' => 'king_flags', 'post_type' => king_post_types(), 'post_status'    => array( 'pending', 'publish' ), ) );
+				$fcomments = get_comments( array( 'author' => $user_id, 'meta_key' => 'king_flags' ) );
+				$ftext     = '';
+				if ( $flags || $fcomments ) {
+					if ( $flags ) {
+						foreach ( $flags as $flag ) {
+							$gflag = get_post_meta( $flag->ID, 'king_flags' );
+							//KB change. Don't show who flagged it as inappropriate
+							$ftext .= '<li><i class="far fa-flag"></i>' . esc_html__( 'Your post  ', 'king' ) . ' <a href="' . get_permalink( $flag->ID ) . '" >' . esc_attr( get_the_title( $flag->ID ) ) . '</a> has been flagged as inappropriate. <a href="https://arete.market/content-moderation-policy/" >What does this mean?</a></li>';
+						}
+					}
+					if ( $fcomments ) {
+						foreach ( $fcomments as $fcomment ) {
+							$gflag = get_comment_meta( $fcomment->comment_ID, 'king_flags' );
+							$ftext .= '<li><i class="far fa-flag"></i>' . esc_html__( 'Your comment has been flagged as inappropriate: ', 'king' ) . ' <a href="' . get_comment_link( $fcomment->comment_ID ) . '" >' . esc_html__( 'comment#', 'king' ) . esc_attr( $fcomment->comment_ID ) . '</a></li>';
+						}
+					}
+				} else {
+					$ftext .= '<li class="king-clean-center"><i class="fas fa-battery-empty"></i><br>' . esc_html__( 'Nothing new right now !', 'king' ) . '</li>';
+				}
+				//delete_option( 'king_flag_count' ); KB change. Only admins can remove flag.
+				echo $ftext;
+				die();
 			}
-			delete_option( 'king_flag_count' );
-			echo $ftext;
-			die();
 		}
 		add_action( 'wp_ajax_nopriv_king_show_flag', 'king_show_flag' );
 		add_action( 'wp_ajax_king_show_flag', 'king_show_flag' );
@@ -806,7 +855,7 @@ if ( king_plugin_active( 'ACF' ) ) :
 		function king_who_flagged( $flags ) {
 			$ftitle = '';
 			foreach ( $flags['0'] as $flag ) {
-				$ftitle .= '<a href="' . esc_url( site_url() . '/' . $GLOBALS['king_account'] . '/' . get_user_by( 'id', $flag )->user_login ) . '">' . get_user_by( 'id', $flag )->user_login . '</a>, ';
+				$ftitle .= '<a href="' . esc_url( site_url() . '/' . $GLOBALS['king_account'] . '/' . get_user_by( 'id', $flag )->user_login ) . '">' . get_user_by( 'id', $flag )->user_login . '</a> ';
 			}
 			return $ftitle;
 		}

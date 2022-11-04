@@ -2133,6 +2133,122 @@ acf_add_local_field_group(array(
     'show_in_rest' => false,
 ));
 
+/*
+ * KB Licensing Options
+ * group_5aaalicencesc
+ */ 
+acf_add_local_field_group(array(
+    'key' => 'group_5aaalicencesc',
+    'title' => 'Licensing Options',
+    'fields' => 
+        array(
+            array(
+            'key' => 'field_5aaalicencesc',
+            'label' => 'Licences',
+            'name' => 'licence',
+            'type' => 'repeater',
+            'instructions' => 'Add a new Licence.',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'collapsed' => '',
+            'min' => 0,
+            'max' => 10,
+            'layout' => 'table',
+            'button_label' => 'New Licence',
+            'sub_fields' => 
+                array(
+                    array(
+                        'key' => 'field_5aaalicencesn',
+                        'label' => 'Licence Short Name',
+                        'name' => 'licence_short_name',
+                        'type' => 'text',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => 0,
+                        'wrapper' => array(
+                            'width' => '20',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'default_value' => '',
+                        'placeholder' => '',
+                        'prepend' => 'Short',
+                        'append' => '',
+                        'maxlength' => 50,
+                    ),
+                    array(
+                        'key' => 'field_5aaalicencenn',
+                        'label' => 'Licence Name',
+                        'name' => 'licence_name',
+                        'type' => 'text',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => 0,
+                        'wrapper' => array(
+                            'width' => '50',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'default_value' => '',
+                        'placeholder' => '',
+                        'prepend' => 'Name',
+                        'append' => '',
+                        'maxlength' => 50,
+                    ),
+                    array(
+                        'key' => 'field_5aaalicencurl',
+                        'label' => 'Licence URL',
+                        'name' => 'licence_url',
+                        'type' => 'text',
+                        'instructions' => '',
+                        'required' => 0,
+                        'conditional_logic' => 0,
+                        'wrapper' => array(
+                            'width' => '50',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'default_value' => '',
+                        'placeholder' => '',
+                        'prepend' => 'URL',
+                        'append' => '',
+                        'maxlength' => 50,
+                    ),
+                ),   
+            ),
+        ),
+    'location' => array(
+        array(
+            array(
+                'param' => 'options_page',
+                'operator' => '==',
+                'value' => 'acf-options-licences',
+            ),
+        ),
+        array(
+            array(
+                'param' => 'post_type',
+                'operator' => '==',
+                'value' => 'arlem',
+            ),
+        ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => true,
+    'description' => '',
+    'show_in_rest' => false,
+));
+
 acf_add_local_field_group(array(
     'key' => 'group_5aaadfdfcb26c',
     'title' => 'Extra Options',
@@ -4096,7 +4212,7 @@ acf_add_local_field_group(array(
                 'class' => '',
                 'id' => '',
             ),
-            'default_value' => 15,
+            'default_value' => 1,
             'placeholder' => '',
             'prepend' => 'flags',
             'append' => '',
@@ -13215,7 +13331,35 @@ acf_add_local_field_group(array(
     'description' => '',
     'show_in_rest' => 0,
 ));
-
+//KB changes
+acf_add_local_field_group(array(
+    'key' => 'group_99bc8b2c4a3e8',
+    'title' => 'ARLEM upload',
+    'fields' => array(
+        array(
+            'key' => 'field_99f5335001eed',
+            'label' => 'upload',
+            'name' => 'arlem_upload',
+            'type' => 'file',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => array(
+                array(
+                ),
+            ),
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'return_format' => 'array',
+            'library' => 'uploadedTo',
+            'min_size' => '',
+            'max_size' => 2000,
+            'mime_types' => 'zip',
+        ),
+    )
+)); 
 acf_add_local_field_group(array(
     'key' => 'group_58bc8b2c4a3e8',
     'title' => 'video url',
@@ -13455,7 +13599,7 @@ acf_add_local_field_group(array(
                     'library' => 'uploadedTo',
                     'min_size' => '',
                     'max_size' => 150,
-                    'mime_types' => 'mp4, flv, mp3, mov',
+                    'mime_types' => 'mp4, flv, mp3, mov', 
                 ),
                 array(
                     'key' => 'field_5ee7d4f37603f',
@@ -16051,7 +16195,7 @@ acf_add_local_field_group(array(
                 'class' => '',
                 'id' => '',
             ),
-            'default_value' => 'Our website uses cookies to improve your experience. Learn more about: <a href="#">Cookie Policy</a>',
+            'default_value' => 'Our website uses cookies to improve your experience. Learn more about: <a href="https://arete.market/privacy-policy/">Cookie Policy</a>',
             'placeholder' => '',
             'maxlength' => '',
             'rows' => 4,
