@@ -89,7 +89,7 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 			'capability'  => 'manage_options',
 		)
 	);
-	// Licences.
+	// KB: Licences.
 	acf_add_options_sub_page(
 		array(
 			'page_title'  => esc_html__( 'King Licences', 'king' ),

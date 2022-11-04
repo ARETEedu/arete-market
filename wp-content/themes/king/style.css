@@ -1063,7 +1063,16 @@ embed,object{
     border-color:red;
     font-weight:600
 }
+.king-flag.noedit{
+    background-color:red;
+    color:#fff;
+    border-color:red;
+    font-weight:600
+}
 .king-flag.flagged i{
+    font-weight:600
+}
+.king-flag.noedit i{
     font-weight:600
 }
 #kingflagin i{

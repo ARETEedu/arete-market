@@ -420,7 +420,7 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 			</div>
 			<div class="submit-news-right">
 			<div class="submit-news-right-fixed">
-			<div class="king-form-group">
+				<div class="king-form-group">
 				<!-- Upload Image (optional) -->
 				<label for="king_post_content"><?php esc_html_e( 'Thumbnail', 'king' ); ?></label>
 				<span class="info-block"><?php esc_html_e( 'Add a thumbnail image to your post. If the uploaded zip contains a file named thumbnail.jpg, or you are adding a video, you do not need to add an image', 'king' ) ?></span>

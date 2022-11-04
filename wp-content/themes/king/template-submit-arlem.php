@@ -235,7 +235,7 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 		<?php esc_html_e( 'You do not have permission to view this page!', 'king' ); ?></div>
 <!-- Initial check: IF an admin has turned on verified accounts are turned on, is the user verified -->
 <?php elseif ( get_field( 'only_verified', 'options' ) === true && ! get_field( 'verified_account', 'user_' . get_current_user_id() ) && ! is_super_admin() ) : ?>  
-		<div class="king-alert"><i class="fa fa-bell fa-lg" aria-hidden="true"></i><?php esc_html_e( 'You do not have permission to view this page!', 'king' ); ?></div>
+		<div class="king-alert"><i class="fa fa-bell fa-lg" aria-hidden="true"></i><?php esc_html_e( 'You must be a verified user to create an ARLEM: complete your profile to apply', 'king' ); ?></div>
 <!-- Initial check: Does the user have the right permissions (i.e. are they an "author") -->
 <?php elseif ( get_field( 'enable_user_groups', 'options' ) && ! king_groups_permissions( 'groups_create_posts' ) && ! is_super_admin() ) : ?>
 	<div class="king-alert"><i class="fa fa-bell fa-lg" aria-hidden="true"></i><?php esc_html_e( 'You do not have permission to view this page!', 'king' ); ?></div>
@@ -361,8 +361,7 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 				<div class="acf-field acf-field-file acf-field-5ee7d4327603e" data-name="arlem_upload" data-type="file" data-key="field_99f5335001eed" data-conditions="[[{&quot;field&quot;:&quot;field_5ee7d3c77603d&quot;,&quot;operator&quot;:&quot;==&quot;,&quot;value&quot;:&quot;1&quot;}]]">
 					<div class="acf-input">
 						<div class="acf-file-uploader" data-library="uploadedTo" data-mime_types="zip" data-uploader="wp">
-						<input type="hidden" name="acf[field_99f5335001eed]" value="<?php echo esc_attr( isset( $_POST['acf']['field_99f5335001eed'] ) ? $_POST['acf']['field_99f5335001eed'] : '' ); ?>" data-name="id" disabled="">	
-						<div class="show-if-value file-wrap">
+						<input type="hidden" name="acf[field_99f5335001eed]" value="<?php echo esc_attr( isset( $_POST['acf']['field_99f5335001eed'] ) ? $_POST['acf']['field_99f5335001eed'] : '' ); ?>" data-name="id" disabled="">	<div class="show-if-value file-wrap">
 								<div class="file-icon">
 									<img data-name="icon" src="" alt="">
 								</div>
@@ -392,7 +391,6 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 				</div>	
 			
 				<!-- CONTENT -->	
-				<br>
 				<span class="info-block"><?php esc_html_e( 'Describe your ARLEM content', 'king' ) ?></span>
 				<?php $content = isset($_POST['king_post_content']) ? $_POST['king_post_content'] : ''; ?>
 				<div class="king-form-group">
@@ -439,16 +437,16 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 				<label for="king_post_content"><?php esc_html_e( 'Thumbnail', 'king' ); ?></label>
 				<span class="info-block"><?php esc_html_e( 'Add a thumbnail image to your post. If the uploaded zip contains a file named thumbnail.jpg, or you are adding a video, you do not need to add an image', 'king' ) ?></span>
 				<?php
-				$post_thumb = $_POST['acf']['field_58f5594a975cb'];
+				$post_thumb = '';
 				$post_thumb_url = '';
-				if ( isset( $post_thumb ) && !empty($post_thumb)) {
-					$post_thumb_url = wp_get_attachment_url( $post_thumb ) ? wp_get_attachment_url( $_POST['acf']['field_58f5594a975cb'] ) : '';
+				if ( isset( $_POST['acf']['field_58f5594a975cb'] )) {
+					$post_thumb = $_POST['acf']['field_58f5594a975cb'];
+					$post_thumb_url = wp_get_attachment_url( $_POST['acf']['field_58f5594a975cb'] );
 					?>
 					<div class="acf-field acf-field-image acf-field-58f5594a975cb" style="width: 100%; min-height: 210px;" data-name="_thumbnail_id" data-type="image" data-key="field_58f5594a975cb" data-width="50">
 					<div class="acf-input">
 						<div class="acf-image-uploader acf-cf has-value" data-preview_size="medium" data-library="uploadedTo" data-mime_types="jpg, png, gif, jpeg" data-uploader="wp">
-							<input name="acf[field_58f5594a975cb]" value="<?php echo esc_attr( $post_thumb ); ?>" type="hidden">	
-							<div class="view show-if-value acf-soh" style="width: 100%;">
+							<input name="acf[field_58f5594a975cb]" value="<?php echo esc_attr( $post_thumb ); ?>" type="hidden">	<div class="view show-if-value acf-soh" style="width: 100%;">
 							<img data-name="image" src="<?php echo esc_url( $post_thumb_url ); ?>">
 							<ul class="acf-hl acf-soh-target">
 								<li><a class="acf-icon -pencil dark" data-name="edit" href="#" title="Edit"></a></li>
