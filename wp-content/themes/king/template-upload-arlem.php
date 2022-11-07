@@ -261,7 +261,7 @@ if ( isset( $_POST['king_post_upload_form_submitted'] ) && wp_verify_nonce( $_PO
 							$_POST['acf']['field_99f5335001eed'] = $retval;
 							echo '<span class="upload-info-block">Your ARLEM file has successfully been uploaded. Please complete the following form in order to submit it.</span>';
 						} else {
-							echo '<div class="king-error">'. esc_attr( $retval ) . '</div>';
+							echo '<div class="king-error">Your ALREM file has failed to upload, please create a new ARLEM by going to https://arete.market/submit-arlem/</div>';
 						}
 					} 
 				} ?>
