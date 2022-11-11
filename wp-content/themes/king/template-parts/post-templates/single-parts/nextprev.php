@@ -45,7 +45,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			),
 			'<span class="edit-link">',
-			'</span>'
+			'</span>',
+			get_the_ID()
 		);
 	//endif;
 	?>
