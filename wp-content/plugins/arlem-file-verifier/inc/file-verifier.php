@@ -5,7 +5,7 @@ function check_file_extension($file_extension) {
     
     //Permitted file types:
     $allowed_file_extensions = array(
-        'json', 'wav', 'bin', 'gltf', 'png', 'jpg', 'jpeg'
+        'json', 'wav', 'bin', 'gltf', 'png', 'jpg', 'jpeg', 'pdf'
     );
 
     $match = false;
@@ -39,6 +39,10 @@ function verify_file($file_id) {
         for( $i = 0; $i < $zip->numFiles; $i++ ){ 
             $stat = $zip->statIndex( $i ); 
             $file_name = basename( $stat['name'] );
+            if (strpos($file_name, ".") == 0) {
+                //this is a folder
+                continue;
+            }
             $file_extension = substr($file_name, strpos($file_name, ".") + 1);  
             $file_ext_valid = check_file_extension($file_extension);
             if (!$file_ext_valid) {
